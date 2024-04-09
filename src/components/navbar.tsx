@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   const LiClassName =
-    "hover:underline hover:underline-offset-4 hover:text-indigo-500 transition-colors duration-200";
+    "hover:underline hover:underline-offset-4 transition-colors duration-200";
   const whileHover = { scale: 1.1 };
   const transition = { type: "spring", stiffness: 300, duration: 0.5 };
   const initial = { opacity: 0, y: -10 };
@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <motion.nav
-      className="flex justify-between items-center py-4 px-4"
+      className="flex justify-between items-center py-4 px-4 w-full"
       initial={initial}
       animate={animate}
       transition={{

@@ -1,7 +1,8 @@
 import { PROJECTS } from "@/constants";
-import projects from "../projects.json";
 import { syncopate } from "@/fonts";
 import Image from "next/image";
+import Link from "next/link";
+import { IoChevronBack } from "react-icons/io5";
 
 interface IProps {
   params: { projectSlug: string };
@@ -18,8 +19,17 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
   return (
     <main className="">
       <div className="px-4 mx-auto max-w-screen-md">
+        <span>
+          <Link
+            href="/projects"
+            className="text-sm text-gray-200 hover:text-gray-100 font-medium flex items-center gap-2 my-4 hover:underline"
+          >
+            <IoChevronBack />
+            back
+          </Link>
+        </span>
         <h2
-          className={`my-8 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
+          className={`my-20 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
         >
           {project.name}
         </h2>

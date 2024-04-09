@@ -35,7 +35,7 @@ export default function ContactPage() {
     <main className="">
       <div className="px-4 mx-auto max-w-screen-md">
         <h2
-          className={`m-8 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
+          className={`my-24 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
         >
           Get in touch
         </h2>
@@ -54,7 +54,7 @@ export default function ContactPage() {
               }
             }
           }}
-          className="space-y-8 px-6 md:px-10"
+          className="space-y-10 mb-20 max-w-2xl mx-auto"
         >
           <div>
             <label

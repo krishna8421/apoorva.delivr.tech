@@ -60,7 +60,7 @@ export default function ProjectsPage() {
     <main className="">
       <div className="px-4 mx-auto max-w-screen-md">
         <h2
-          className={`mt-8 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
+          className={`mt-24 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
         >
           Projects
         </h2>

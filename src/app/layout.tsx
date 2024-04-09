@@ -13,6 +13,7 @@ import { PropsWithChildren } from "react";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Toaster } from "sonner";
+import { HeroHighlight } from "@/components/hero-highlight";
 
 const ogImage = "/og.png";
 const twitterImage = "/twitter-og.png";
@@ -60,12 +61,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body
         className={`${GeistSans.className} antialiased bg-black text-white`}
       >
-        <main className="max-w-3xl min-h-screen flex flex-col justify-between m-auto">
-          <NavBar />
-          <div className="flex-grow">{children}</div>
-          <Footer />
-          <Toaster position="top-center" richColors />
-        </main>
+        <HeroHighlight className="w-3xl">
+          <main className="max-w-3xl w-full min-h-screen mx-auto flex flex-col justify-between">
+            <NavBar />
+            <div className="flex-grow">{children}</div>
+            <Footer />
+            <Toaster position="top-center" richColors />
+          </main>
+        </HeroHighlight>
       </body>
     </html>
   );
