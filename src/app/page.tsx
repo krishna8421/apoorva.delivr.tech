@@ -22,14 +22,8 @@ export default function HomePage() {
         >
           3D Artist | XR Designer | UX Specialist
         </p>
+        
       </section>
-      {/* <Image
-        src="/img/hero.png"
-        alt="Apoorva Kumari"
-        width={300}
-        height={300}
-        className="rounded-lg"
-      /> */}
       <div className="h-96"></div>
     </main>
   );
