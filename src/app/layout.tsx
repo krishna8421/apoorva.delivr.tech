@@ -12,6 +12,7 @@ import {
 import { PropsWithChildren } from "react";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Toaster } from "sonner";
 
 const ogImage = "/og.png";
 const twitterImage = "/twitter-og.png";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <NavBar />
           <div className="flex-grow">{children}</div>
           <Footer />
+          <Toaster position="top-center" richColors />
         </main>
       </body>
     </html>

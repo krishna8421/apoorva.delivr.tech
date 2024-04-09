@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import { syncopate } from "@/fonts";
+import { sendEmailToMe } from "./actions";
+import { useFormStatus } from "react-dom";
+import { toast } from "sonner";
 
 export default function ContactPage() {
+  const { pending } = useFormStatus();
+
   const buttonVariants = {
     hover: {
       scale: 1.1,
@@ -34,7 +39,23 @@ export default function ContactPage() {
         >
           Get in touch
         </h2>
-        <form action="#" className="space-y-8 px-6 md:px-10">
+        <form
+          action={async (formData) => {
+            const res = await sendEmailToMe(formData);
+            if (res.success) {
+              toast.success("Message sent successfully");
+            } else {
+              if (res.isValidationError) {
+                res.errors?.forEach((error) => {
+                  toast.error(error);
+                });
+              } else {
+                toast.error("Error sending message");
+              }
+            }
+          }}
+          className="space-y-8 px-6 md:px-10"
+        >
           <div>
             <label
               htmlFor="name"
@@ -44,7 +65,8 @@ export default function ContactPage() {
             </label>
             <motion.input
               type="text"
-              id="subject"
+              id="name"
+              name="name"
               className="block p-3 w-full text-sm rounded-lg border shadow-sm outline-none bg-black border-gray-600 placeholder-gray-400 text-white  shadow-sm-light"
               placeholder="Your name"
               required
@@ -62,6 +84,7 @@ export default function ContactPage() {
             <motion.input
               type="email"
               id="email"
+              name="email"
               className="shadow-sm border text-sm rounded-lg outline-none  block w-full p-2.5 bg-black border-gray-600 placeholder-gray-400 text-white  shadow-sm-light"
               placeholder="Your email address"
               required
@@ -78,6 +101,7 @@ export default function ContactPage() {
             </label>
             <motion.textarea
               id="message"
+              name="message"
               rows={6}
               className="block p-2.5 w-full text-sm rounded-lg outline-none shadow-sm border bg-black border-gray-600 placeholder-gray-400 text-white "
               placeholder="Your message here"
@@ -87,6 +111,7 @@ export default function ContactPage() {
           </div>
           <motion.button
             type="submit"
+            disabled={pending}
             className="bg-indigo-600/95 hover:bg-indigo-600 text-white font-bold py-3 w-full px-4 rounded-lg focus:outline-none focus:shadow-outline"
             variants={buttonVariants}
             whileHover="hover"
