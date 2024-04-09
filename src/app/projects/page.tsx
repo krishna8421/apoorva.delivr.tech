@@ -18,7 +18,8 @@ export interface CardProps {
 function Card({ data }: CardProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
+
+  const y = useParallax(scrollYProgress, 150);
 
   const { name, description, projectSlug } = data;
 
@@ -27,14 +28,14 @@ function Card({ data }: CardProps) {
       <Link href={`/projects/${projectSlug}`}>
         <div
           ref={ref}
-          className="w-96 h-96 relative snap-always snap-center hover:scale-105 transition-all duration-150 ease-in-out"
+          className="w-96 h-96 relative snap-always snap-center hover:scale-105 transition-all duration-300 ease-in-out"
         >
           <Image
             src={`/img/projects/${projectSlug}.jpg`}
             alt="A London skyscraper"
             width={300}
             height={300}
-            className="rounded-lg absolute object-cover w-full h-full"
+            className="rounded-lg absolute object-cover w-full h-full border border-gray-900 shadow-xl"
           />
         </div>
       </Link>

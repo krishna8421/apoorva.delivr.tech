@@ -14,6 +14,7 @@ import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Toaster } from "sonner";
 import { HeroHighlight } from "@/components/hero-highlight";
+import PageAnimatePresence from "@/components/hoc/PageAnimatePresence";
 
 const ogImage = "/og.png";
 const twitterImage = "/twitter-og.png";
@@ -64,7 +65,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <HeroHighlight className="w-3xl">
           <main className="max-w-3xl w-full min-h-screen mx-auto flex flex-col justify-between">
             <NavBar />
-            <div className="flex-grow">{children}</div>
+            <div className="flex-grow">
+              <PageAnimatePresence>{children}</PageAnimatePresence>
+            </div>
             <Footer />
             <Toaster position="top-center" richColors />
           </main>

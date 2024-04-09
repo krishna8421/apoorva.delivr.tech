@@ -11,7 +11,7 @@ export default function ContactPage() {
 
   const buttonVariants = {
     hover: {
-      scale: 1.1,
+      scale: 1.05,
       transition: {
         duration: 0.3,
       },
