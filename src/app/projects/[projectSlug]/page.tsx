@@ -1,3 +1,5 @@
+"use client";
+
 import { PROJECTS } from "@/constants";
 import { syncopate } from "@/fonts";
 import Image from "next/image";
@@ -31,38 +33,35 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
         <h2
           className={`my-20 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
         >
-          {project.name}
+          {project.title}
         </h2>
-        <div className="text-white">{project.description}</div>
-        <div className="py-16 flex flex-col gap-8">
-          <Image
-            src={`/img/projects/1.jpg`}
-            alt={project.name}
-            width={800}
-            height={600}
-            className="rounded-lg"
-          />
-          <Image
-            src={`/img/projects/2.jpg`}
-            alt={project.name}
-            width={800}
-            height={600}
-            className="rounded-lg"
-          />
-          <Image
-            src={`/img/projects/3.jpg`}
-            alt={project.name}
-            width={800}
-            height={600}
-            className="rounded-lg"
-          />
-          <Image
-            src={`/img/projects/4.jpg`}
-            alt={project.name}
-            width={800}
-            height={600}
-            className="rounded-lg"
-          />
+        <div className="text-white text-justify">{project.description}</div>
+        <div className="py-16 flex flex-col gap-6">
+          <div className="grid gap-6 grid-cols-2">
+            {project.images.startGrid.map((image, index) => (
+              <div className="relative w-full" key={index}>
+                <Image
+                  src={`/img/projects/${project.projectSlug}/start-grid/${image}`}
+                  alt={image}
+                  width={400}
+                  height={400}
+                  className="rounded border border-zinc-900 shadow-xl"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-6 flex-col">
+            {project.images.main.map((image, index) => (
+              <div className="relative w-full h-96" key={index}>
+                <Image
+                  src={`/img/projects/${project.projectSlug}/main/${image}`}
+                  alt={image}
+                  fill
+                  className="rounded border border-zinc-900 shadow-xl absolute object-cover w-full h-full inset-0"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>
