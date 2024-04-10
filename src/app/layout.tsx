@@ -15,6 +15,7 @@ import Footer from "@/components/footer";
 import { Toaster } from "sonner";
 import { HeroHighlight } from "@/components/hero-highlight";
 import PageAnimatePresence from "@/components/hoc/PageAnimatePresence";
+import { Providers } from "./providers";
 
 const ogImage = "/og.png";
 const twitterImage = "/twitter-og.png";
@@ -58,19 +59,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${GeistSans.className} antialiased bg-black text-white`}
       >
         <HeroHighlight className="w-3xl">
-          <main className="max-w-3xl w-full min-h-screen mx-auto flex flex-col justify-between">
-            <NavBar />
-            <div className="flex-grow">
-              <PageAnimatePresence>{children}</PageAnimatePresence>
-            </div>
-            <Footer />
-            <Toaster position="top-center" richColors />
-          </main>
+          <Providers>
+            <main className="max-w-3xl w-full min-h-screen mx-auto flex flex-col justify-between">
+              <NavBar />
+              <div className="flex-grow">
+                <PageAnimatePresence>{children}</PageAnimatePresence>
+              </div>
+              <Footer />
+              <Toaster position="top-center" richColors />
+            </main>
+          </Providers>
         </HeroHighlight>
       </body>
     </html>

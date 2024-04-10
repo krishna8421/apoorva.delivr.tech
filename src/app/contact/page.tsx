@@ -5,6 +5,7 @@ import { syncopate } from "@/fonts";
 import { sendEmailToMe } from "./actions";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
+import { Button } from "@nextui-org/react";
 
 export default function ContactPage() {
   const { pending } = useFormStatus();
@@ -109,16 +110,17 @@ export default function ContactPage() {
               whileFocus="focus"
             ></motion.textarea>
           </div>
-          <motion.button
+          <Button
+            size="lg"
             type="submit"
-            disabled={pending}
+            isLoading={pending}
             className="bg-indigo-600/95 hover:bg-indigo-600 text-white font-bold py-3 w-full px-4 rounded-lg focus:outline-none focus:shadow-outline"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
+            // variants={buttonVariants}
+            // whileHover="hover"
+            // whileTap="tap"
           >
             Send message
-          </motion.button>
+          </Button>
         </form>
       </div>
     </main>
