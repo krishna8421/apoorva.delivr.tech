@@ -51,7 +51,7 @@ function Card({ data, index }: CardProps) {
         <h2 className="text-4xl font-mono italic text-gray-200 select-none tracking-tight font-light">{`#00${index}`}</h2>
         <Link href={`/projects/${projectSlug}`}>
           <h1
-            className={`text-5xl font-extrabold text-white tracking-tight py-4 hover:underline ${syncopate.className}`}
+            className={`text-5xl font-extrabold text-white tracking-tight py-4 hover:underline uppercase ${syncopate.className}`}
           >
             {title}
           </h1>

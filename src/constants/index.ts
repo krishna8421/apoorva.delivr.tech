@@ -23,6 +23,7 @@ export const PROJECTS: IProject[] = [
     title: "MUSIC WITH A MISSION",
     subTitle: `Skullcandy "All Love" Edition Crusher Evo`,
     description: `Skullcandy is the original lifestyle audio brand, born in 2003 and their products are created, tuned and tested to deliver music people can feel. The Skullcandy "All Love'' Edition Crusher Evo headphone is a great amalgamation of music and mission. Working in partnership with To Write Love on Her Arms (TWLOHA), the company donated a portion of all proceeds from the sale of this new design to the nonprofit movement. This limited-edition headphone visibly celebrates the pride month with its vibrant color palette.`,
+    extendedDescription: "All love & all year",
     projectSlug: "skullcandy",
     images: {
       thumbnail: "SideViewRender2.png",
@@ -66,7 +67,7 @@ export const PROJECTS: IProject[] = [
     title: "PET IN YOUR DREAMS",
     subTitle: `Meet Rob!`,
     description: `The same old household story of me trying to convince my mother to get a pet, definitely not an easy job. After failing to convince the infinity times, I started scrolling my phone to distract myself and found pictures of robots as I love technology and things related to that. So, I created a pet robot for myself.`,
-    extendedDescription: ``,
+    extendedDescription: `Finally, I won years later having a pet turtle.`,
     projectSlug: "robo",
     images: {
       thumbnail: "robotadpole.png",

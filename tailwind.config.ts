@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
 import { nextui } from "@nextui-org/react";
+import tailwindForms from "@tailwindcss/forms";
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -17,6 +18,7 @@ const config: Config = {
   darkMode: "class",
   plugins: [
     nextui(),
+    tailwindForms,
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
