@@ -33,15 +33,22 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           </Link>
         </span>
         <h2
-          className={`my-20 text-6xl tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
+          className={`mt-20 text-6xl tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
         >
           {project.title}
         </h2>
+
+        <h2
+          className={`text-balance text-2xl my-8 tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
+        >
+          {project.subTitle}
+        </h2>
+
         <div className="text-white text-justify first-letter:text-3xl">
-          {project.description}{" "}
-          <span className="italic font-semibold text-gray-200 underline decoration-2 decoration-indigo-500">
-            {project.extendedDescription}
-          </span>
+          {project.description}
+        </div>
+        <div className="text-gray-200 mt-8 text-lg font-semibold">
+          {project.extendedDescription}
         </div>
         <div className="py-16 flex flex-col gap-6">
           <div className="grid gap-6 grid-cols-2">
@@ -70,6 +77,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             ))}
           </div>
         </div>
+        {/* Add a new section with links to other projects */}
       </div>
     </main>
   );

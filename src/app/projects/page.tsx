@@ -25,7 +25,6 @@ function Card({ data, index }: CardProps) {
   const {
     title,
     subTitle,
-    description,
     projectSlug,
     images: { thumbnail },
   } = data;

@@ -16,6 +16,7 @@ import { Toaster } from "sonner";
 import { HeroHighlight } from "@/components/hero-highlight";
 import PageAnimatePresence from "@/components/hoc/PageAnimatePresence";
 import { Providers } from "./providers";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const ogImage = "/og.png";
 const twitterImage = "/twitter-og.png";
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body
         className={`${GeistSans.className} antialiased bg-black text-white`}
       >
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
                 <PageAnimatePresence>{children}</PageAnimatePresence>
               </div>
               <Footer />
+              <ScrollToTop/>
               <Toaster position="top-center" richColors />
             </main>
           </Providers>
