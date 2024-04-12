@@ -68,11 +68,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <Providers>
             <main className="max-w-3xl w-full min-h-screen mx-auto flex flex-col justify-between">
               <NavBar />
-              <div className="flex-grow">
-                <PageAnimatePresence>{children}</PageAnimatePresence>
-              </div>
+              <PageAnimatePresence>
+                <div className="flex-grow">{children}</div>
+              </PageAnimatePresence>
               <Footer />
-              <ScrollToTop/>
+              <ScrollToTop />
               <Toaster position="top-center" richColors />
             </main>
           </Providers>

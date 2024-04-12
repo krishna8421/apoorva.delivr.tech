@@ -5,12 +5,30 @@ import { syncopate } from "@/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import { IoChevronBack } from "react-icons/io5";
+// import { Chip, Avatar } from "@nextui-org/react";
+// import type { Metadata, ResolvingMetadata } from "next";
+// import { SITE_NAME } from "@/constants";
 
 export const dynamic = "force-static";
 
 interface IProps {
   params: { projectSlug: string };
 }
+
+// export async function generateMetadata({
+//   params: { projectSlug },
+// }: IProps): Promise<Metadata> {
+//   const project = PROJECTS.find(
+//     (project) => project.projectSlug === projectSlug
+//   );
+
+//   if (!project) {
+//     throw new Error(`Project not found for slug: ${projectSlug}`);
+//   }
+//   return {
+//     title: `${project.title} | ${SITE_NAME}`,
+//   };
+// }
 
 export default function ProjectPage({ params: { projectSlug } }: IProps) {
   const project = PROJECTS.find(
@@ -33,32 +51,76 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           </Link>
         </span>
         <h2
-          className={`mt-20 text-6xl tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
+          className={`mt-20 text-5xl md:text-6xl ${
+            project.subTitle ? "" : "mb-8"
+          } tracking-tight font-extrabold text-center text-white uppercase ${
+            syncopate.className
+          }`}
         >
           {project.title}
         </h2>
 
-        <h2
-          className={`text-balance text-2xl my-8 tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
-        >
-          {project.subTitle}
-        </h2>
+        {project.subTitle && (
+          <h2
+            className={`text-balance text-xl md:text-2xl my-8 tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
+          >
+            {project.subTitle}
+          </h2>
+        )}
+
+        {/* TODO */}
+        {/* {project.tools && (
+          <div
+            className={`w-full flex gap-4 justify-center mb-8 flex-wrap ${
+              project.tools.length === 0 ? "hidden" : ""
+            }`}
+          >
+            {project.tools.map((tool, i) => (
+              <Chip
+                key={i}
+                variant="flat"
+                avatar={<Avatar name="JW" src={`/img/tools/${tool.logo}`} />}
+              >
+                {tool.name}
+              </Chip>
+            ))}
+          </div>
+        )} */}
 
         <div className="text-white text-justify first-letter:text-3xl">
           {project.description}
         </div>
-        <div className="text-gray-200 mt-8 text-lg font-semibold">
-          {project.extendedDescription}
-        </div>
-        <div className="py-16 flex flex-col gap-6">
-          <div className="grid gap-6 grid-cols-2">
-            {project.images.startGrid.map((image, index) => (
+        {project.extendedDescription && (
+          <div className="text-gray-200 mt-8 text-lg font-semibold">
+            {project.extendedDescription}
+          </div>
+        )}
+        <div className={`py-16 flex flex-col gap-6`}>
+          <div
+            className={`flex gap-6 flex-col ${
+              project.images.startMain ? "" : "hidden"
+            }`}
+          >
+            {project.images.startMain?.map((image, index) => (
+              <Image
+                key={index}
+                src={`/img/projects/${project.projectSlug}/main/${image}`}
+                alt="Main image"
+                width={800}
+                height={600}
+                quality={100}
+                className="rounded-lg border border-zinc-900 shadow-xl w-full h-full"
+              />
+            ))}
+          </div>
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+            {project.images.startGrid?.map((image, index) => (
               <div className="relative w-full" key={index}>
                 <Image
                   src={`/img/projects/${project.projectSlug}/start-grid/${image}`}
-                  alt={image}
-                  width={400}
-                  height={400}
+                  alt="Starting grid image"
+                  width={800}
+                  height={600}
                   className="rounded border border-zinc-900 shadow-xl"
                 />
               </div>
@@ -66,18 +128,18 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           </div>
           <div className="flex gap-6 flex-col">
             {project.images.main.map((image, index) => (
-              <div className="relative w-full h-96" key={index}>
-                <Image
-                  src={`/img/projects/${project.projectSlug}/main/${image}`}
-                  alt={image}
-                  fill
-                  className="rounded border border-zinc-900 shadow-xl absolute object-cover w-full h-full inset-0"
-                />
-              </div>
+              <Image
+                key={index}
+                src={`/img/projects/${project.projectSlug}/main/${image}`}
+                alt="Main image"
+                width={800}
+                height={600}
+                quality={100}
+                className="rounded-lg border border-zinc-900 shadow-xl w-full h-full"
+              />
             ))}
           </div>
         </div>
-        {/* Add a new section with links to other projects */}
       </div>
     </main>
   );

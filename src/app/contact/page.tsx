@@ -6,21 +6,15 @@ import { sendEmailToMe } from "./actions";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
 import { Button } from "@nextui-org/react";
+// import type { Metadata } from "next";
+// import { SITE_NAME } from "@/constants";
+
+// export const metadata: Metadata = {
+//   title: `Contact | ${SITE_NAME}`,
+// }
 
 export default function ContactPage() {
   const { pending } = useFormStatus();
-
-  const buttonVariants = {
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.3,
-      },
-    },
-    tap: {
-      scale: 0.9,
-    },
-  };
 
   const inputVariants = {
     focus: {
@@ -114,10 +108,7 @@ export default function ContactPage() {
             size="lg"
             type="submit"
             isLoading={pending}
-            className="bg-indigo-600/95 hover:bg-indigo-600 text-white font-bold py-3 w-full px-4 rounded-lg focus:outline-none focus:shadow-outline"
-            // variants={buttonVariants}
-            // whileHover="hover"
-            // whileTap="tap"
+            className="bg-indigo-600/95 hover:bg-indigo-600 text-white font-bold py-3 w-full px-4 rounded-lg shadow-sm-light transition-all duration-200 ease-in-out hover:scale-105"
           >
             Send message
           </Button>

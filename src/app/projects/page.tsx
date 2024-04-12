@@ -6,6 +6,12 @@ import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
 import { IProject, PROJECTS } from "@/constants";
+// import type { Metadata } from "next";
+// import { SITE_NAME } from "@/constants";
+
+// export const metadata: Metadata = {
+//   title: `Projects | ${SITE_NAME}`,
+// }
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -55,11 +61,13 @@ function Card({ data, index }: CardProps) {
             {title}
           </h1>
         </Link>
-        <h3
-          className={`text-lg text-gray-200 tracking-tight line-clamp-2 font-semibold ${syncopate.className}`}
-        >
-          {subTitle}
-        </h3>
+        {subTitle && (
+          <h3
+            className={`text-lg text-gray-200 tracking-tight line-clamp-2 font-semibold ${syncopate.className}`}
+          >
+            {subTitle}
+          </h3>
+        )}
       </motion.div>
     </section>
   );
