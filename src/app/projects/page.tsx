@@ -36,7 +36,7 @@ function Card({ data, index }: CardProps) {
   } = data;
 
   return (
-    <section className="h-screen flex justify-center items-center origin-center gap-8 snap-y snap-mandatory">
+    <section className="h-screen flex justify-center items-center origin-center gap-4 snap-y snap-mandatory">
       <Link href={`/projects/${projectSlug}`}>
         <div
           ref={ref}
@@ -56,7 +56,7 @@ function Card({ data, index }: CardProps) {
         <h2 className="text-4xl font-mono italic text-gray-200 select-none tracking-tight font-light">{`#00${index}`}</h2>
         <Link href={`/projects/${projectSlug}`}>
           <h1
-            className={`text-5xl font-extrabold text-white tracking-tight py-4 hover:underline uppercase ${syncopate.className}`}
+            className={`text-4xl font-extrabold text-white tracking-tight py-4 hover:underline uppercase ${syncopate.className}`}
           >
             {title}
           </h1>
