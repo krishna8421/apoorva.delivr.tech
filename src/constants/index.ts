@@ -30,6 +30,9 @@ export interface IProject {
     startGrid?: IImages;
     main: IImages;
   };
+  videos?: {
+    startMain: string[];
+  };
 }
 
 export const TOOLS = {
@@ -173,6 +176,9 @@ export const PROJECTS: IProject[] = [
         "robe single4.png",
         "roboviews.png",
       ],
+    },
+    videos: {
+      startMain: ["an5.mp4"],
     },
   },
   {

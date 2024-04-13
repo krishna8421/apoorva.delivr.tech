@@ -79,7 +79,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               <Chip
                 key={i}
                 variant="flat"
-                avatar={<Avatar name="JW" src={`/img/tools/${tool.logo}`} />}
+                avatar={<Avatar name="JW" src={`/tools/${tool.logo}`} />}
               >
                 {tool.name}
               </Chip>
@@ -96,6 +96,20 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           </div>
         )}
         <div className={`py-16 flex flex-col gap-6`}>
+          {project.videos && (
+            <div>
+              {project.videos.startMain.map((video, index) => (
+                <video
+                  key={index}
+                  autoPlay
+                  muted
+                  loop
+                  src={`/projects/${project.projectSlug}/start-video/${video}`}
+                  className="rounded-lg border border-zinc-900 shadow-xl w-full h-full"
+                />
+              ))}
+            </div>
+          )}
           <div
             className={`flex gap-6 flex-col ${
               project.images.startMain ? "" : "hidden"
@@ -104,7 +118,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             {project.images.startMain?.map((image, index) => (
               <Image
                 key={index}
-                src={`/img/projects/${project.projectSlug}/start-main/${image}`}
+                src={`/projects/${project.projectSlug}/start-main/${image}`}
                 alt="Starting Main image"
                 width={800}
                 height={600}
@@ -113,11 +127,15 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               />
             ))}
           </div>
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+          <div
+            className={`grid gap-6 grid-cols-1 md:grid-cols-2 ${
+              project.images.startMain ? "" : "hidden"
+            }`}
+          >
             {project.images.startGrid?.map((image, index) => (
               <div className="relative w-full" key={index}>
                 <Image
-                  src={`/img/projects/${project.projectSlug}/start-grid/${image}`}
+                  src={`/projects/${project.projectSlug}/start-grid/${image}`}
                   alt="Starting grid image"
                   width={800}
                   height={600}
@@ -130,7 +148,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             {project.images.main.map((image, index) => (
               <Image
                 key={index}
-                src={`/img/projects/${project.projectSlug}/main/${image}`}
+                src={`/projects/${project.projectSlug}/main/${image}`}
                 alt="Main image"
                 width={800}
                 height={600}

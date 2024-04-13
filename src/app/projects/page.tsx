@@ -43,7 +43,7 @@ function Card({ data, index }: CardProps) {
           className="w-96 h-96 relative snap-always snap-center hover:scale-105 transition-all duration-300 ease-in-out"
         >
           <Image
-            src={`/img/projects/${projectSlug}/${thumbnail}`}
+            src={`/projects/${projectSlug}/${thumbnail}`}
             alt={subTitle || title}
             width={300}
             height={300}
