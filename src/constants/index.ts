@@ -120,7 +120,7 @@ export const PROJECTS: IProject[] = [
     projectSlug: "skullcandy",
     tools: [],
     images: {
-      thumbnail: "SideViewRender2.png",
+      thumbnail: "main/SideViewRender2.png",
       startGrid: [
         "Wireframe.png",
         "SideView.png",
@@ -141,7 +141,7 @@ export const PROJECTS: IProject[] = [
     description: `Podiums provides products with the main character energy. To maintain the main character energy of the beauty products following podiums are visualized and finally created. In this project, I created a series of visually captivating 3D podiums that accentuate the unique energy and character of various products. These podiums serve as the perfect platforms for showcasing beauty products in a way that resonates with their inherent qualities, capturing the attention of viewers and enhancing their overall appeal.`,
     projectSlug: "podiums",
     images: {
-      thumbnail: "BlackPodium.png",
+      thumbnail: "main/BlackPodium.png",
       startGrid: [],
       main: [
         "BlackPodium.png",
@@ -164,7 +164,7 @@ export const PROJECTS: IProject[] = [
     extendedDescription: `Finally, I won years later having a pet turtle.`,
     projectSlug: "robo",
     images: {
-      thumbnail: "robotadpole.png",
+      thumbnail: "main/robotadpole.png",
       startGrid: ["Wireframe1.png", "Wireframe2.png"],
       main: [
         "Wireframe3.png",
@@ -182,7 +182,7 @@ export const PROJECTS: IProject[] = [
     extendedDescription: `Check these out!`,
     projectSlug: "hello100",
     images: {
-      thumbnail: "Brainstorming(1).png",
+      thumbnail: "start-main/Brainstorming(1).png",
       startMain: [
         "Brainstorming(1).png",
         "Mindmapping(2).png",

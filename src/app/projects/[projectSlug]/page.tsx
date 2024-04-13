@@ -104,8 +104,8 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             {project.images.startMain?.map((image, index) => (
               <Image
                 key={index}
-                src={`/img/projects/${project.projectSlug}/main/${image}`}
-                alt="Main image"
+                src={`/img/projects/${project.projectSlug}/start-main/${image}`}
+                alt="Starting Main image"
                 width={800}
                 height={600}
                 quality={100}
