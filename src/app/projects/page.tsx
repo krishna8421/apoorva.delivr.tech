@@ -36,7 +36,7 @@ function Card({ data, index }: CardProps) {
   } = data;
 
   return (
-    <section className="h-screen flex justify-center items-center origin-center gap-4 snap-y snap-mandatory">
+    <section className="h-screen flex justify-start items-center origin-center gap-4 snap-y snap-mandatory">
       <Link href={`/projects/${projectSlug}`}>
         <div
           ref={ref}
@@ -55,11 +55,11 @@ function Card({ data, index }: CardProps) {
       <motion.div style={{ y }}>
         <h2 className="text-4xl font-mono italic text-gray-200 select-none tracking-tight font-light">{`#00${index}`}</h2>
         <Link href={`/projects/${projectSlug}`}>
-          <h1
+          <pre
             className={`text-4xl font-extrabold text-white tracking-tight py-4 hover:underline uppercase ${syncopate.className}`}
           >
             {title}
-          </h1>
+          </pre>
         </Link>
         {subTitle && (
           <h3

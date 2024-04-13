@@ -20,7 +20,7 @@ export type IImages = (string | IImage)[];
 export interface IProject {
   title: string;
   subTitle?: string;
-  description: string;
+  description: string[];
   extendedDescription?: string;
   projectSlug: string;
   tools?: ITool[];
@@ -31,7 +31,8 @@ export interface IProject {
     main: IImages;
   };
   videos?: {
-    startMain: string[];
+    main?: string[];
+    middle?: string[];
   };
 }
 
@@ -116,9 +117,11 @@ export const TOOLS = {
 
 export const PROJECTS: IProject[] = [
   {
-    title: "MUSIC WITH A MISSION",
+    title: "MUSIC WITH\nA MISSION",
     subTitle: `Skullcandy "All Love" Edition Crusher Evo`,
-    description: `Skullcandy is the original lifestyle audio brand, born in 2003 and their products are created, tuned and tested to deliver music people can feel. The Skullcandy "All Love'' Edition Crusher Evo headphone is a great amalgamation of music and mission. Working in partnership with To Write Love on Her Arms (TWLOHA), the company donated a portion of all proceeds from the sale of this new design to the nonprofit movement. This limited-edition headphone visibly celebrates the pride month with its vibrant color palette.`,
+    description: [
+      `Skullcandy is the original lifestyle audio brand, born in 2003 and their products are created, tuned and tested to deliver music people can feel. The Skullcandy "All Love'' Edition Crusher Evo headphone is a great amalgamation of music and mission. Working in partnership with To Write Love on Her Arms (TWLOHA), the company donated a portion of all proceeds from the sale of this new design to the nonprofit movement. This limited-edition headphone visibly celebrates the pride month with its vibrant color palette.`,
+    ],
     extendedDescription: "All love & all year",
     projectSlug: "skullcandy",
     tools: [],
@@ -141,7 +144,9 @@ export const PROJECTS: IProject[] = [
   {
     title: "SHOWCASE",
     subTitle: `Podiums for Beauty Products`,
-    description: `Podiums provides products with the main character energy. To maintain the main character energy of the beauty products following podiums are visualized and finally created. In this project, I created a series of visually captivating 3D podiums that accentuate the unique energy and character of various products. These podiums serve as the perfect platforms for showcasing beauty products in a way that resonates with their inherent qualities, capturing the attention of viewers and enhancing their overall appeal.`,
+    description: [
+      `Podiums provides products with the main character energy. To maintain the main character energy of the beauty products following podiums are visualized and finally created. In this project, I created a series of visually captivating 3D podiums that accentuate the unique energy and character of various products. These podiums serve as the perfect platforms for showcasing beauty products in a way that resonates with their inherent qualities, capturing the attention of viewers and enhancing their overall appeal.`,
+    ],
     projectSlug: "podiums",
     images: {
       thumbnail: "main/BlackPodium.png",
@@ -161,9 +166,11 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    title: "PET IN YOUR DREAMS",
+    title: "PET IN YOUR\nDREAMS",
     subTitle: `Meet Rob!`,
-    description: `The same old household story of me trying to convince my mother to get a pet, definitely not an easy job. After failing to convince the infinity times, I started scrolling my phone to distract myself and found pictures of robots as I love technology and things related to that. So, I created a pet robot for myself.`,
+    description: [
+      `The same old household story of me trying to convince my mother to get a pet, definitely not an easy job. After failing to convince the infinity times, I started scrolling my phone to distract myself and found pictures of robots as I love technology and things related to that. So, I created a pet robot for myself.`,
+    ],
     extendedDescription: `Finally, I won years later having a pet turtle.`,
     projectSlug: "robo",
     images: {
@@ -178,13 +185,15 @@ export const PROJECTS: IProject[] = [
       ],
     },
     videos: {
-      startMain: ["an5.mp4"],
+      main: ["an5.mp4"],
     },
   },
   {
     title: "CAPTIVATING",
     subTitle: `Hello100 saying Hi to 3D.`,
-    description: `Hello100 is a company that specializes in providing high quality NMN (Nicotinamide Mononucleotide) formulations to individuals seeking to improve their health span and promote longevity. It aims to stay ahead of its competitors by offering a unique and visually captivating representation of its supplements. The project brief was to create visually captivating 3D podiums to showcase Hello100's high-quality NMN formulations, reinforcing the company's commitment to innovation, quality, and scientific credibility to resonate with health-conscious consumers.`,
+    description: [
+      `Hello100 is a company that specializes in providing high quality NMN (Nicotinamide Mononucleotide) formulations to individuals seeking to improve their health span and promote longevity. It aims to stay ahead of its competitors by offering a unique and visually captivating representation of its supplements. The project brief was to create visually captivating 3D podiums to showcase Hello100's high-quality NMN formulations, reinforcing the company's commitment to innovation, quality, and scientific credibility to resonate with health-conscious consumers.`,
+    ],
     extendedDescription: `Check these out!`,
     projectSlug: "hello100",
     images: {
@@ -212,6 +221,29 @@ export const PROJECTS: IProject[] = [
         "Untitled design.png",
         "2ca0af6e-c450-4671-8ec4-2610b650cca6.png",
       ],
+    },
+  },
+  {
+    title: "INTERACTIVE\nPRODUCT\nREPRESENTA-\nTION",
+    subTitle: `Stream VR`,
+    description: [
+      `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
+      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR. The time`,
+    ],
+    extendedDescription: `The time constraint was the real challenge!`,
+    projectSlug: "train",
+    images: {
+      thumbnail: "start-main/5.png",
+      startMain: ["1.png", "2.png", "3.png", "4.jpg", "5.png", "6.png"],
+      main: [
+        "Screenshot 2024-04-13 013654.png",
+        "Screenshot 2024-04-13 013743.png",
+        "Screenshot 2024-04-13 013336.png",
+        "Screenshot 2024-04-13 013824.png",
+      ],
+    },
+    videos: {
+      middle: ["low-bitrate.mp4"],
     },
   },
 ];

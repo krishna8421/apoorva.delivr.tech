@@ -57,7 +57,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             syncopate.className
           }`}
         >
-          {project.title}
+          {project.title.split("-\n").join("")}
         </h2>
 
         {project.subTitle && (
@@ -87,9 +87,19 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           </div>
         )} */}
 
-        <div className="text-white text-justify first-letter:text-3xl">
-          {project.description}
+        <div className="space-y-4">
+          {project.description.map((desc: string, index) => (
+            <h1
+              key={index}
+              className={`text-white text-justify ${
+                index === 0 ? "first-letter:text-3xl" : ""
+              } w-full overflow-hidden`}
+            >
+              {desc}
+            </h1>
+          ))}
         </div>
+
         {project.extendedDescription && (
           <div className="text-gray-200 mt-8 text-lg font-semibold">
             {project.extendedDescription}
@@ -98,7 +108,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
         <div className={`py-16 flex flex-col gap-6`}>
           {project.videos && (
             <div>
-              {project.videos.startMain.map((video, index) => (
+              {project.videos.main?.map((video, index) => (
                 <video
                   key={index}
                   autoPlay
@@ -127,6 +137,20 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               />
             ))}
           </div>
+          {project.videos && (
+            <div>
+              {project.videos.middle?.map((video, index) => (
+                <video
+                  key={index}
+                  autoPlay
+                  muted
+                  loop
+                  src={`/projects/${project.projectSlug}/middle-video/${video}`}
+                  className="rounded-lg border border-zinc-900 shadow-xl w-full h-full"
+                />
+              ))}
+            </div>
+          )}
           <div
             className={`grid gap-6 grid-cols-1 md:grid-cols-2 ${
               project.images.startMain ? "" : "hidden"
