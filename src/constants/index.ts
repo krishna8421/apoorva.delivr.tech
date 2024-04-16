@@ -15,9 +15,14 @@ export interface IImage {
   alt: string;
 }
 
+export type IProjectCategory = "3D" | "UI/UX";
+export type IProjectType = "photos/videos" | "pdfs";
+
 export type IImages = (string | IImage)[];
 
 export interface IProject {
+  type: IProjectType;
+  category: IProjectCategory;
   title: string;
   subTitle?: string;
   description: string[];
@@ -28,12 +33,13 @@ export interface IProject {
     thumbnail: string;
     startMain?: IImages;
     startGrid?: IImages;
-    main: IImages;
+    main?: IImages;
   };
   videos?: {
     main?: string[];
     middle?: string[];
   };
+  pdf?: string;
 }
 
 export const TOOLS = {
@@ -117,6 +123,8 @@ export const TOOLS = {
 
 export const PROJECTS: IProject[] = [
   {
+    type: "photos/videos",
+    category: "3D",
     title: "MUSIC WITH\nA MISSION",
     subTitle: `Skullcandy "All Love" Edition Crusher Evo`,
     description: [
@@ -142,6 +150,8 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
+    type: "photos/videos",
+    category: "3D",
     title: "SHOWCASE",
     subTitle: `Podiums for Beauty Products`,
     description: [
@@ -167,6 +177,8 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
+    type: "photos/videos",
+    category: "3D",
     title: "PET IN YOUR\nDREAMS",
     subTitle: `Meet Rob!`,
     description: [
@@ -190,6 +202,8 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
+    type: "photos/videos",
+    category: "3D",
     title: "CAPTIVATING",
     subTitle: `Hello100 saying Hi to 3D.`,
     description: [
@@ -236,6 +250,8 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
+    type: "photos/videos",
+    category: "3D",
     title: "INTERACTIVE\nPRODUCT\nSHOWCASE",
     subTitle: `Stream VR`,
     description: [
@@ -261,5 +277,17 @@ export const PROJECTS: IProject[] = [
     videos: {
       main: ["low-bitrate.mp4"],
     },
+  },
+  {
+    type: "photos/videos",
+    category: "UI/UX",
+    title: "Kantha",
+    subTitle: `Kantha`,
+    description: [`kantha`],
+    projectSlug: "kantha",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdf: "kantha.pdf",
   },
 ];

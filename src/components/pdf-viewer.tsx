@@ -19,9 +19,13 @@ const options = {
   //   standardFontDataUrl: "/standard_fonts/",
 };
 
-const maxWidth = 800;
+const maxWidth = 768;
 
-const PdfViewer = () => {
+interface IProps {
+  pdfFile: string;
+}
+
+const PdfViewer = ({ pdfFile }: IProps) => {
   const [numPages, setNumPages] = useState<number>(0);
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();
@@ -42,7 +46,7 @@ const PdfViewer = () => {
   return (
     <div className="p-4" ref={setContainerRef}>
       <Document
-        file="/pdfs/research-paper.pdf"
+        file={`${pdfFile}`}
         onLoadSuccess={onDocumentLoadSuccess}
         options={options}
         className="flex flex-col items-center gap-6"

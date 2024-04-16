@@ -1,6 +1,7 @@
 "use client";
 
 import { FollowerPointerCard } from "@/components/following-pointer";
+import PdfViewer from "@/components/pdf-viewer";
 import { PROJECTS } from "@/constants";
 import { syncopate } from "@/fonts";
 import Image from "next/image";
@@ -188,8 +189,14 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             })}
           </div>
 
-          <div className="flex gap-6 flex-col">
-            {project.images.main.map((image, index) => (
+          <div
+            className={`flex gap-6 flex-col ${
+              project.images.main && project.images.main.length > 0
+                ? ""
+                : "hidden"
+            }`}
+          >
+            {project.images.main?.map((image, index) => (
               <Image
                 key={index}
                 src={`/projects/${project.projectSlug}/main/${image}`}
@@ -201,6 +208,12 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               />
             ))}
           </div>
+
+          {project.pdf && (
+            <PdfViewer
+              pdfFile={`/projects/${project.projectSlug}/pdf/${project.pdf}`}
+            />
+          )}
         </div>
       </div>
     </main>

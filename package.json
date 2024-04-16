@@ -33,7 +33,8 @@
     "tailwind-merge": "^2.2.2",
     "validator": "^13.11.0",
     "zod": "^3.22.4",
-    "zod-formik-adapter": "^1.3.0"
+    "zod-formik-adapter": "^1.3.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
