@@ -147,6 +147,7 @@ export const PROJECTS: IProject[] = [
     description: [
       `Podiums provides products with the main character energy. To maintain the main character energy of the beauty products following podiums are visualized and finally created. In this project, I created a series of visually captivating 3D podiums that accentuate the unique energy and character of various products. These podiums serve as the perfect platforms for showcasing beauty products in a way that resonates with their inherent qualities, capturing the attention of viewers and enhancing their overall appeal.`,
     ],
+    extendedDescription: "Have a look at these!",
     projectSlug: "podiums",
     images: {
       thumbnail: "main/BlackPodium.png",
@@ -197,14 +198,25 @@ export const PROJECTS: IProject[] = [
     extendedDescription: `Check these out!`,
     projectSlug: "hello100",
     images: {
-      thumbnail: "start-main/Brainstorming(1).png",
-      startMain: [
-        "Brainstorming(1).png",
-        "Mindmapping(2).png",
-        "Elements Choosen(3).png",
-        "Explorations(4).jpg",
-      ],
+      thumbnail: "start-grid/Brainstorming(1).png",
+      startMain: [],
       startGrid: [
+        {
+          url: "Brainstorming(1).png",
+          alt: "Brainstorming",
+        },
+        {
+          url: "Mindmapping(2).png",
+          alt: "Mind Mapping",
+        },
+        {
+          url: "Elements Choosen(3).png",
+          alt: "Elements Chosen",
+        },
+        {
+          url: "Explorations(4).png",
+          alt: "Explorations",
+        },
         "cap.png",
         "Bottle.png",
         "hello 100-01.png",
@@ -224,7 +236,7 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    title: "INTERACTIVE\nPRODUCT\nREPRESENTA-\nTION",
+    title: "INTERACTIVE\nPRODUCT\nSHOWCASE",
     subTitle: `Stream VR`,
     description: [
       `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
@@ -233,9 +245,13 @@ export const PROJECTS: IProject[] = [
     extendedDescription: `The time constraint was the real challenge!`,
     projectSlug: "train",
     images: {
-      thumbnail: "start-main/5.png",
-      startMain: ["1.png", "2.png", "3.png", "4.jpg", "5.png", "6.png"],
+      thumbnail: "main/5.png",
+      startGrid: ["2.png", "3.png"],
       main: [
+        "1.png",
+        "4.jpg",
+        "5.png",
+        "6.png",
         "Screenshot 2024-04-13 013654.png",
         "Screenshot 2024-04-13 013743.png",
         "Screenshot 2024-04-13 013336.png",
@@ -243,7 +259,7 @@ export const PROJECTS: IProject[] = [
       ],
     },
     videos: {
-      middle: ["low-bitrate.mp4"],
+      main: ["low-bitrate.mp4"],
     },
   },
 ];

@@ -45,8 +45,7 @@ function Card({ data, index }: CardProps) {
           <Image
             src={`/projects/${projectSlug}/${thumbnail}`}
             alt={subTitle || title}
-            width={300}
-            height={300}
+            fill
             quality={100}
             className="rounded-lg absolute object-cover w-full h-full border border-gray-900 shadow-xl"
           />

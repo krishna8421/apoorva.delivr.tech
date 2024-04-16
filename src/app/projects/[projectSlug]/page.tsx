@@ -1,5 +1,6 @@
 "use client";
 
+import { FollowerPointerCard } from "@/components/following-pointer";
 import { PROJECTS } from "@/constants";
 import { syncopate } from "@/fonts";
 import Image from "next/image";
@@ -105,6 +106,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             {project.extendedDescription}
           </div>
         )}
+
         <div className={`py-16 flex flex-col gap-6`}>
           {project.videos && (
             <div>
@@ -120,9 +122,12 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               ))}
             </div>
           )}
+
           <div
             className={`flex gap-6 flex-col ${
-              project.images.startMain ? "" : "hidden"
+              project.images.startMain && project.images.startMain.length > 0
+                ? ""
+                : "hidden"
             }`}
           >
             {project.images.startMain?.map((image, index) => (
@@ -137,6 +142,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               />
             ))}
           </div>
+
           {project.videos && (
             <div>
               {project.videos.middle?.map((video, index) => (
@@ -151,23 +157,37 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               ))}
             </div>
           )}
+
           <div
             className={`grid gap-6 grid-cols-1 md:grid-cols-2 ${
-              project.images.startMain ? "" : "hidden"
+              project.images.startGrid && project.images.startGrid.length > 0
+                ? ""
+                : "hidden"
             }`}
           >
-            {project.images.startGrid?.map((image, index) => (
-              <div className="relative w-full" key={index}>
-                <Image
-                  src={`/projects/${project.projectSlug}/start-grid/${image}`}
-                  alt="Starting grid image"
-                  width={800}
-                  height={600}
-                  className="rounded border border-zinc-900 shadow-xl"
-                />
-              </div>
-            ))}
+            {project.images.startGrid?.map((image, index) => {
+              return (
+                <FollowerPointerCard
+                  key={index}
+                  title={typeof image === "object" ? image.alt : undefined}
+                  // className={typeof image === "object" ? "" : "hidden"}
+                >
+                  <div className="relative w-full">
+                    <Image
+                      src={`/projects/${project.projectSlug}/start-grid/${
+                        typeof image === "object" ? image.url : image
+                      }`}
+                      alt="Starting grid image"
+                      width={800}
+                      height={600}
+                      className="rounded border border-zinc-900 shadow-xl"
+                    />
+                  </div>
+                </FollowerPointerCard>
+              );
+            })}
           </div>
+
           <div className="flex gap-6 flex-col">
             {project.images.main.map((image, index) => (
               <Image
