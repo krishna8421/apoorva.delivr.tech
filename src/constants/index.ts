@@ -290,9 +290,10 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "UX/XR",
-    title: "Research Paper",
+    title: "RESEARCH PAPER",
     subTitle: `Cultural Appropriation in the Fashion Industry`,
-    description: [`Research Paper`],
+    description: [`This study delves into the contentious issue of cultural appropriation in the fashion industry, examining its historical evolution and contemporary implications. Through an analysis of past famous examples, the study elucidates how cultural appropriation can lead to offense and unwanted commodification. Adopting a comparative law perspective, various solutions to address cultural appropriation are considered. A quantitative research approach, via an online survey, explores individuals' perceptions of cultural appropriation in fashion and its commercial exploitation.`],
+    extendedDescription: "Can I borrow some of your time for viewing this?",
     projectSlug: "research-paper",
     images: {
       thumbnail: "thumbnail.png",
