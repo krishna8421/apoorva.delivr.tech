@@ -15,13 +15,13 @@ export interface IImage {
   alt: string;
 }
 
-export type IProjectCategory = "3D" | "UI/UX";
-export type IProjectType = "photos/videos" | "pdfs";
+export type IProjectCategory = "3D" | "UX/XR";
+// export type IProjectType = "photos/videos" | "pdfs";
 
 export type IImages = (string | IImage)[];
 
 export interface IProject {
-  type: IProjectType;
+  // type: IProjectType;
   category: IProjectCategory;
   title: string;
   subTitle?: string;
@@ -123,9 +123,8 @@ export const TOOLS = {
 
 export const PROJECTS: IProject[] = [
   {
-    type: "photos/videos",
     category: "3D",
-    title: "MUSIC WITH\nA MISSION",
+    title: "MUSIC WITH A MISSION",
     subTitle: `Skullcandy "All Love" Edition Crusher Evo`,
     description: [
       `Skullcandy is the original lifestyle audio brand, born in 2003 and their products are created, tuned and tested to deliver music people can feel. The Skullcandy "All Love'' Edition Crusher Evo headphone is a great amalgamation of music and mission. Working in partnership with To Write Love on Her Arms (TWLOHA), the company donated a portion of all proceeds from the sale of this new design to the nonprofit movement. This limited-edition headphone visibly celebrates the pride month with its vibrant color palette.`,
@@ -150,7 +149,6 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    type: "photos/videos",
     category: "3D",
     title: "SHOWCASE",
     subTitle: `Podiums for Beauty Products`,
@@ -177,9 +175,8 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    type: "photos/videos",
     category: "3D",
-    title: "PET IN YOUR\nDREAMS",
+    title: "PET IN YOUR DREAMS",
     subTitle: `Meet Rob!`,
     description: [
       `The same old household story of me trying to convince my mother to get a pet, definitely not an easy job. After failing to convince the infinity times, I started scrolling my phone to distract myself and found pictures of robots as I love technology and things related to that. So, I created a pet robot for myself.`,
@@ -202,7 +199,6 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    type: "photos/videos",
     category: "3D",
     title: "CAPTIVATING",
     subTitle: `Hello100 saying Hi to 3D.`,
@@ -250,13 +246,12 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    type: "photos/videos",
     category: "3D",
-    title: "INTERACTIVE\nPRODUCT\nSHOWCASE",
+    title: "INTERACTIVE PRODUCT SHOWCASE",
     subTitle: `Stream VR`,
     description: [
       `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
-      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR. The time`,
+      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR.`,
     ],
     extendedDescription: `The time constraint was the real challenge!`,
     projectSlug: "train",
@@ -279,15 +274,44 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
-    type: "photos/videos",
-    category: "UI/UX",
-    title: "Kantha",
-    subTitle: `Kantha`,
-    description: [`kantha`],
+    category: "UX/XR",
+    title: "CRAFT CLUSTER DOCUMENTATION",
+    subTitle: `Kantha in Nanoor`,
+    description: [
+      `The aim of this project was to document the Kantha craft cluster in Nanoor, focusing on understanding the challenges faced by artisans and the craft itself in terms of upliftment. The project employs a mixed-methods approach, combining quantitative and qualitative research methodologies, including surveys, interviews, and ethnographic research, to comprehensively investigate the issues and dynamics within the craft cluster. My personal goal was to understand the craft and the artisan and make people understand and value the craft and their efforts.`,
+    ],
+    extendedDescription:
+      "My focus was to understand the whole cluster and find an area where I can contribute through my domain knowledge.",
     projectSlug: "kantha",
     images: {
       thumbnail: "thumbnail.png",
     },
     pdf: "kantha.pdf",
+  },
+  {
+    category: "UX/XR",
+    title: "Research Paper",
+    subTitle: `Cultural Appropriation in the Fashion Industry`,
+    description: [`Research Paper`],
+    projectSlug: "research-paper",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdf: "research-paper.pdf",
+  },
+  {
+    category: "UX/XR",
+    title: "SYSTEM THINKING",
+    subTitle: `Understanding & Improving NIFT (Kolkata) Library`,
+    description: [
+      `The primary objective of this project is to conduct a comprehensive analysis of the library system at the National Institute of Fashion Technology (NIFT). The aim is to identify existing gaps and areas for improvement within the system. By understanding the current setup, potential challenges, and stakeholder needs, the project seeks to propose viable solutions to enhance the efficiency and effectiveness of the NIFT library. This one was my personal  favorite as being one of the user and user experience designer of the project and not mixing my biases in the research was an interesting task.`,
+    ],
+    extendedDescription:
+      "It took months of research and revisiting research to get to this level of understanding!",
+    projectSlug: "system-thinking",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdf: "system-thinking.pdf",
   },
 ];

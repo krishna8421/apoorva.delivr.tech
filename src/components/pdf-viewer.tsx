@@ -6,6 +6,7 @@ import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import type { PDFDocumentProxy } from "pdfjs-dist";
+import { CircularProgress } from "@nextui-org/react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
@@ -29,6 +30,7 @@ const PdfViewer = ({ pdfFile }: IProps) => {
   const [numPages, setNumPages] = useState<number>(0);
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const onResize = useCallback<ResizeObserverCallback>((entries) => {
     const [entry] = entries;
@@ -38,6 +40,7 @@ const PdfViewer = ({ pdfFile }: IProps) => {
   function onDocumentLoadSuccess({
     numPages: nextNumPages,
   }: PDFDocumentProxy): void {
+    // setIsLoading(false);
     setNumPages(nextNumPages);
   }
 
@@ -45,13 +48,19 @@ const PdfViewer = ({ pdfFile }: IProps) => {
 
   return (
     <div className="p-4" ref={setContainerRef}>
+      {/* {isLoading && (
+        <div className="flex justify-center items-center">
+          <CircularProgress color="secondary" aria-label="Loading..." />
+        </div>
+      )} */}
+
       <Document
         file={`${pdfFile}`}
         onLoadSuccess={onDocumentLoadSuccess}
         options={options}
         className="flex flex-col items-center gap-6"
       >
-        {Array.from(new Array(numPages), (el, index) => (
+        {Array.from(new Array(numPages), (_, index) => (
           <Page
             key={`page_${index + 1}`}
             pageNumber={index + 1}
