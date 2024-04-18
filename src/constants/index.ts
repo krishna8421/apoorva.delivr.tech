@@ -368,7 +368,7 @@ export const PROJECTS: IProject[] = [
       `The objective of this project is to enhance the user experience and visual appeal of the 112 India mobile application. The redesign aims to streamline the app interface, improve accessibility, and ensure a user-friendly experience during emergency situations.`,
     ],
     extendedDescription: "One stop for all SOS alerts.",
-    projectSlug: "system-thinking",
+    projectSlug: "112",
     images: {
       thumbnail: "thumbnail.png",
     },
