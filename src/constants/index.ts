@@ -274,6 +274,35 @@ export const PROJECTS: IProject[] = [
     },
   },
   {
+    category: "3D",
+    title: "VISUALIZE",
+    subTitle: `Kettle Coffee Table`,
+    description: [
+      `Burrow is a furniture brand that focuses on creating enduring pieces that remain fresh and relevant over time chasing fleeting trends. The design ethos revolves around the aesthetics of American Mid-Century Modernism and contemporary Scandinavian style. The key feature are modular designs, timeless, functional and pet friendly. The aim was to create highly realistic and accurate 3D models of their furniture.`,
+    ],
+    extendedDescription: `Have a look at these beautiful pieces!`,
+    projectSlug: "burrow",
+    images: {
+      thumbnail: "main/brrr6.png",
+      startGrid: ["Screenshot 2024-03-06 061805.png", "burrow wireframe 2.png"],
+      main: [
+        "Screenshot 2024-03-06 024538.png",
+        "960c04d3-523a-4b62-b6a0-1960b0353910.jpg",
+        "brrr1.png",
+        "brrr2.png",
+        "brrr5.png",
+        "brrr6.png",
+        "brrr7.png",
+        "brrr8.png",
+        "brrr10.png",
+        "brrr11.png",
+        "brrr12.png",
+        "brrr13.png",
+        "brrr14.png",
+      ],
+    },
+  },
+  {
     category: "UX/XR",
     title: "CRAFT CLUSTER DOCUMENTATION",
     subTitle: `Kantha in Nanoor`,
@@ -290,9 +319,25 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "UX/XR",
+    title: "SHE",
+    subTitle: `Self-Development Empowerment Healing`,
+    description: [
+      `The ultimate idea of SHE, a therapeutic VR game is to heal and regain the lost confidence and self-worth form the Sexual Harassment. SHE is based on Self Development, Healing and Empowerment. We have all we need to heal; it's just recognizing our abilities through certain incidents. The game aims to empower players by exploring alternative decision-making, fostering emotional healing, and promoting resilience for making assertive, informed choices in future situations resembling past trauma.`,
+    ],
+    extendedDescription: "Happy Healing Journey!",
+    projectSlug: "she",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdf: "VRGame.pdf",
+  },
+  {
+    category: "UX/XR",
     title: "RESEARCH PAPER",
     subTitle: `Cultural Appropriation in the Fashion Industry`,
-    description: [`This study delves into the contentious issue of cultural appropriation in the fashion industry, examining its historical evolution and contemporary implications. Through an analysis of past famous examples, the study elucidates how cultural appropriation can lead to offense and unwanted commodification. Adopting a comparative law perspective, various solutions to address cultural appropriation are considered. A quantitative research approach, via an online survey, explores individuals' perceptions of cultural appropriation in fashion and its commercial exploitation.`],
+    description: [
+      `This study delves into the contentious issue of cultural appropriation in the fashion industry, examining its historical evolution and contemporary implications. Through an analysis of past famous examples, the study elucidates how cultural appropriation can lead to offense and unwanted commodification. Adopting a comparative law perspective, various solutions to address cultural appropriation are considered. A quantitative research approach, via an online survey, explores individuals' perceptions of cultural appropriation in fashion and its commercial exploitation.`,
+    ],
     extendedDescription: "Can I borrow some of your time for viewing this?",
     projectSlug: "research-paper",
     images: {
@@ -314,5 +359,19 @@ export const PROJECTS: IProject[] = [
       thumbnail: "thumbnail.png",
     },
     pdf: "system-thinking.pdf",
+  },
+  {
+    category: "UX/XR",
+    title: "112 India",
+    subTitle: `Emergency Response Report System`,
+    description: [
+      `The objective of this project is to enhance the user experience and visual appeal of the 112 India mobile application. The redesign aims to streamline the app interface, improve accessibility, and ensure a user-friendly experience during emergency situations.`,
+    ],
+    extendedDescription: "One stop for all SOS alerts.",
+    projectSlug: "system-thinking",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdf: "112.pdf",
   },
 ];

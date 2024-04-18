@@ -13,7 +13,7 @@ export default function HomePage() {
     <main>
       <section className="px-2">
         <h1
-          className={`${syncopate.className} text-5xl md:text-8xl text-center mt-24`}
+          className={`${syncopate.className} text-5xl md:text-8xl text-center mt-24 tracking-wider`}
         >
           Apoorva Kumari
         </h1>
@@ -22,7 +22,6 @@ export default function HomePage() {
         >
           3D Artist | XR Designer | UX Specialist
         </p>
-        
       </section>
       <div className="h-96"></div>
     </main>
