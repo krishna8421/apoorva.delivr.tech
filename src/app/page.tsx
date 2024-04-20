@@ -11,7 +11,7 @@ import { FaReact } from "react-icons/fa";
 export default function HomePage() {
   return (
     <main className="">
-      <section className="px-2 mt-52">
+      <section className="px-2 mt-32">
         <h1
           className={`${syncopate.className} text-5xl md:text-8xl text-center`}
         >
