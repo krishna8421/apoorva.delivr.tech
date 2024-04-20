@@ -420,12 +420,12 @@ export const PROJECTS: IProject[] = [
     },
     pdfs: [
       {
-        url: "tabloid.pdf",
-        alt: "Tabloid",
-      },
-      {
         url: "broadsheet.pdf",
         alt: "Broadsheet",
+      },
+      {
+        url: "tabloid.pdf",
+        alt: "Tabloid",
       },
     ],
   },
