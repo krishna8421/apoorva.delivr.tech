@@ -184,58 +184,6 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "3D",
-    title: "PET IN YOUR DREAMS",
-    subTitle: `Meet Rob!`,
-    description: [
-      `The same old household story of me trying to convince my mother to get a pet, definitely not an easy job. After failing to convince the infinity times, I started scrolling my phone to distract myself and found pictures of robots as I love technology and things related to that. So, I created a pet robot for myself.`,
-    ],
-    extendedDescription: `Finally, I won years later having a pet turtle.`,
-    projectSlug: "robo",
-    images: {
-      thumbnail: "main/robotadpole.png",
-      startGrid: ["Wireframe1.png", "Wireframe2.png"],
-      main: [
-        "Wireframe3.png",
-        "envionment.png",
-        "Environmentfull.png",
-        "robe single4.png",
-        "roboviews.png",
-      ],
-    },
-    videos: {
-      main: ["an5.mp4"],
-    },
-  },
-  {
-    category: "3D",
-    title: "INTERACTIVE PRODUCT SHOWCASE",
-    subTitle: `Stream VR`,
-    description: [
-      `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
-      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR.`,
-    ],
-    extendedDescription: `The time constraint was the real challenge!`,
-    projectSlug: "train",
-    images: {
-      thumbnail: "main/5.png",
-      startGrid: ["2.png", "3.png"],
-      main: [
-        "1.png",
-        "4.jpg",
-        "5.png",
-        "6.png",
-        "Screenshot 2024-04-13 013654.png",
-        "Screenshot 2024-04-13 013743.png",
-        "Screenshot 2024-04-13 013336.png",
-        "Screenshot 2024-04-13 013824.png",
-      ],
-    },
-    videos: {
-      main: ["low-bitrate.mp4"],
-    },
-  },
-  {
-    category: "3D",
     title: "CAPTIVATING",
     subTitle: `Hello100 saying Hi to 3D.`,
     description: [
@@ -279,6 +227,58 @@ export const PROJECTS: IProject[] = [
         "Untitled design.png",
         "2ca0af6e-c450-4671-8ec4-2610b650cca6.png",
       ],
+    },
+  },
+  {
+    category: "3D",
+    title: "INTERACTIVE PRODUCT SHOWCASE",
+    subTitle: `Stream VR`,
+    description: [
+      `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
+      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR.`,
+    ],
+    extendedDescription: `The time constraint was the real challenge!`,
+    projectSlug: "train",
+    images: {
+      thumbnail: "main/5.png",
+      startGrid: ["2.png", "3.png"],
+      main: [
+        "1.png",
+        "4.jpg",
+        "5.png",
+        "6.png",
+        "Screenshot 2024-04-13 013654.png",
+        "Screenshot 2024-04-13 013743.png",
+        "Screenshot 2024-04-13 013336.png",
+        "Screenshot 2024-04-13 013824.png",
+      ],
+    },
+    videos: {
+      main: ["low-bitrate.mp4"],
+    },
+  },
+  {
+    category: "3D",
+    title: "PET IN YOUR DREAMS",
+    subTitle: `Meet Rob!`,
+    description: [
+      `The same old household story of me trying to convince my mother to get a pet, definitely not an easy job. After failing to convince the infinity times, I started scrolling my phone to distract myself and found pictures of robots as I love technology and things related to that. So, I created a pet robot for myself.`,
+    ],
+    extendedDescription: `Finally, I won years later having a pet turtle.`,
+    projectSlug: "robo",
+    images: {
+      thumbnail: "main/robotadpole.png",
+      startGrid: ["Wireframe1.png", "Wireframe2.png"],
+      main: [
+        "Wireframe3.png",
+        "envionment.png",
+        "Environmentfull.png",
+        "robe single4.png",
+        "roboviews.png",
+      ],
+    },
+    videos: {
+      main: ["an5.mp4"],
     },
   },
   {
