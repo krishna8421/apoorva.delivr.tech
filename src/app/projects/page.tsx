@@ -51,6 +51,15 @@ export default function ProjectsPage() {
                 )}
               </div>
             </Tab>
+            <Tab key="graphics" title="Graphics">
+              <div className="m-auto">
+                {PROJECTS.filter((project) => project.category === "Graphics").map(
+                  (project, i) => (
+                    <Card data={project} index={i + 1} key={i} />
+                  )
+                )}
+              </div>
+            </Tab>
           </Tabs>
         </div>
       </div>

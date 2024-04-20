@@ -27,6 +27,7 @@ interface IProps {
 }
 
 const PdfViewer = ({ pdfFile }: IProps) => {
+
   const [numPages, setNumPages] = useState<number>(0);
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();

@@ -209,11 +209,32 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
             ))}
           </div>
 
-          {project.pdf && (
+          {/* {project.pdf && (
             <PdfViewer
               pdfFile={`/projects/${project.projectSlug}/pdf/${project.pdf}`}
             />
-          )}
+          )} */}
+          <div
+            className={`flex gap-6 flex-col ${
+              project.pdfs && project.pdfs.length > 0 ? "" : "hidden"
+            }`}
+          >
+            {project.pdfs?.map((pdf, index) => {
+              return (
+                <FollowerPointerCard
+                  key={index}
+                  title={typeof pdf === "object" ? pdf.alt : undefined}
+                  // className={typeof pdf === "object" ? "" : "hidden"}
+                >
+                  <PdfViewer
+                    pdfFile={`/projects/${project.projectSlug}/pdfs/${
+                      typeof pdf === "object" ? pdf.url : pdf
+                    }`}
+                  />
+                </FollowerPointerCard>
+              );
+            })}
+          </div>
         </div>
       </div>
     </main>

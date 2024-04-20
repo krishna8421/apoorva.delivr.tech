@@ -13,7 +13,7 @@ export default function HomePage() {
     <main>
       <section className="px-2">
         <h1
-          className={`${syncopate.className} text-5xl md:text-8xl text-center mt-24 tracking-wider`}
+          className={`${syncopate.className} text-5xl md:text-8xl text-center mt-28`}
         >
           Apoorva Kumari
         </h1>

@@ -15,10 +15,15 @@ export interface IImage {
   alt: string;
 }
 
-export type IProjectCategory = "3D" | "UX/XR";
-// export type IProjectType = "photos/videos" | "pdfs";
+export interface IPdf {
+  url: string;
+  alt: string;
+}
+
+export type IProjectCategory = "3D" | "UX/XR" | "Graphics";
 
 export type IImages = (string | IImage)[];
+export type IPdfs = (string | IPdf)[];
 
 export interface IProject {
   // type: IProjectType;
@@ -39,7 +44,7 @@ export interface IProject {
     main?: string[];
     middle?: string[];
   };
-  pdf?: string;
+  pdfs?: IPdfs;
 }
 
 export const TOOLS = {
@@ -150,27 +155,30 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "3D",
-    title: "SHOWCASE",
-    subTitle: `Podiums for Beauty Products`,
+    title: "VISUALIZE",
+    subTitle: `Kettle Coffee Table`,
     description: [
-      `Podiums provides products with the main character energy. To maintain the main character energy of the beauty products following podiums are visualized and finally created. In this project, I created a series of visually captivating 3D podiums that accentuate the unique energy and character of various products. These podiums serve as the perfect platforms for showcasing beauty products in a way that resonates with their inherent qualities, capturing the attention of viewers and enhancing their overall appeal.`,
+      `Burrow is a furniture brand that focuses on creating enduring pieces that remain fresh and relevant over time chasing fleeting trends. The design ethos revolves around the aesthetics of American Mid-Century Modernism and contemporary Scandinavian style. The key feature are modular designs, timeless, functional and pet friendly. The aim was to create highly realistic and accurate 3D models of their furniture.`,
     ],
-    extendedDescription: "Have a look at these!",
-    projectSlug: "podiums",
+    extendedDescription: `Have a look at these beautiful pieces!`,
+    projectSlug: "burrow",
     images: {
-      thumbnail: "main/BlackPodium.png",
-      startGrid: [],
+      thumbnail: "main/brrr6.png",
+      startGrid: ["Screenshot 2024-03-06 061805.png", "burrow wireframe 2.png"],
       main: [
-        "BlackPodium.png",
-        "Bluepodium.png",
-        "podiumbeigepng.png",
-        "podiumpinkcombo.png",
-        "podiumcombo.png",
-        "podiumpoppink.png",
-        "beigeandpinkpodium.png",
-        "Lightpinkpodium.png",
-        "Pinktwolayerpodium.png",
-        "Purplepodium.png",
+        "Screenshot 2024-03-06 024538.png",
+        "960c04d3-523a-4b62-b6a0-1960b0353910.jpg",
+        "brrr1.png",
+        "brrr2.png",
+        "brrr5.png",
+        "brrr6.png",
+        "brrr7.png",
+        "brrr8.png",
+        "brrr10.png",
+        "brrr11.png",
+        "brrr12.png",
+        "brrr13.png",
+        "brrr14.png",
       ],
     },
   },
@@ -196,6 +204,34 @@ export const PROJECTS: IProject[] = [
     },
     videos: {
       main: ["an5.mp4"],
+    },
+  },
+  {
+    category: "3D",
+    title: "INTERACTIVE PRODUCT SHOWCASE",
+    subTitle: `Stream VR`,
+    description: [
+      `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
+      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR.`,
+    ],
+    extendedDescription: `The time constraint was the real challenge!`,
+    projectSlug: "train",
+    images: {
+      thumbnail: "main/5.png",
+      startGrid: ["2.png", "3.png"],
+      main: [
+        "1.png",
+        "4.jpg",
+        "5.png",
+        "6.png",
+        "Screenshot 2024-04-13 013654.png",
+        "Screenshot 2024-04-13 013743.png",
+        "Screenshot 2024-04-13 013336.png",
+        "Screenshot 2024-04-13 013824.png",
+      ],
+    },
+    videos: {
+      main: ["low-bitrate.mp4"],
     },
   },
   {
@@ -247,58 +283,27 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "3D",
-    title: "INTERACTIVE PRODUCT SHOWCASE",
-    subTitle: `Stream VR`,
+    title: "SHOWCASE",
+    subTitle: `Podiums for Beauty Products`,
     description: [
-      `ELGi is a global industry leader specializing in the design, manufacture, and distribution of a diverse range of industrial products and equipment. With a focus on innovation and sustainability, the company has carved out a strong presence across various sectors, from automotive and construction to healthcare and textiles. We collaborated with ELGi to elevate the showcasing of their products through Virtual Reality at the International Rail Equipment Expo 2023. This project centered around immersing participants into a life-like train environment, allowing them to understand ELGi's products' functionality and innovation up-close.`,
-      `My contribution within the wholesome team was to make 3D model of the train's console, ensuring precise dimensions within a real-life environment. This included intricate textures and well optimized components that will be simulated in the VR.`,
+      `Podiums provides products with the main character energy. To maintain the main character energy of the beauty products following podiums are visualized and finally created. In this project, I created a series of visually captivating 3D podiums that accentuate the unique energy and character of various products. These podiums serve as the perfect platforms for showcasing beauty products in a way that resonates with their inherent qualities, capturing the attention of viewers and enhancing their overall appeal.`,
     ],
-    extendedDescription: `The time constraint was the real challenge!`,
-    projectSlug: "train",
+    extendedDescription: "Have a look at these!",
+    projectSlug: "podiums",
     images: {
-      thumbnail: "main/5.png",
-      startGrid: ["2.png", "3.png"],
+      thumbnail: "main/BlackPodium.png",
+      startGrid: [],
       main: [
-        "1.png",
-        "4.jpg",
-        "5.png",
-        "6.png",
-        "Screenshot 2024-04-13 013654.png",
-        "Screenshot 2024-04-13 013743.png",
-        "Screenshot 2024-04-13 013336.png",
-        "Screenshot 2024-04-13 013824.png",
-      ],
-    },
-    videos: {
-      main: ["low-bitrate.mp4"],
-    },
-  },
-  {
-    category: "3D",
-    title: "VISUALIZE",
-    subTitle: `Kettle Coffee Table`,
-    description: [
-      `Burrow is a furniture brand that focuses on creating enduring pieces that remain fresh and relevant over time chasing fleeting trends. The design ethos revolves around the aesthetics of American Mid-Century Modernism and contemporary Scandinavian style. The key feature are modular designs, timeless, functional and pet friendly. The aim was to create highly realistic and accurate 3D models of their furniture.`,
-    ],
-    extendedDescription: `Have a look at these beautiful pieces!`,
-    projectSlug: "burrow",
-    images: {
-      thumbnail: "main/brrr6.png",
-      startGrid: ["Screenshot 2024-03-06 061805.png", "burrow wireframe 2.png"],
-      main: [
-        "Screenshot 2024-03-06 024538.png",
-        "960c04d3-523a-4b62-b6a0-1960b0353910.jpg",
-        "brrr1.png",
-        "brrr2.png",
-        "brrr5.png",
-        "brrr6.png",
-        "brrr7.png",
-        "brrr8.png",
-        "brrr10.png",
-        "brrr11.png",
-        "brrr12.png",
-        "brrr13.png",
-        "brrr14.png",
+        "BlackPodium.png",
+        "Bluepodium.png",
+        "podiumbeigepng.png",
+        "podiumpinkcombo.png",
+        "podiumcombo.png",
+        "podiumpoppink.png",
+        "beigeandpinkpodium.png",
+        "Lightpinkpodium.png",
+        "Pinktwolayerpodium.png",
+        "Purplepodium.png",
       ],
     },
   },
@@ -315,7 +320,7 @@ export const PROJECTS: IProject[] = [
     images: {
       thumbnail: "thumbnail.png",
     },
-    pdf: "kantha.pdf",
+    pdfs: ["kantha.pdf"],
   },
   {
     category: "UX/XR",
@@ -329,7 +334,7 @@ export const PROJECTS: IProject[] = [
     images: {
       thumbnail: "thumbnail.png",
     },
-    pdf: "VRGame.pdf",
+    pdfs: ["VRGame.pdf"],
   },
   {
     category: "UX/XR",
@@ -343,7 +348,7 @@ export const PROJECTS: IProject[] = [
     images: {
       thumbnail: "thumbnail.png",
     },
-    pdf: "research-paper.pdf",
+    pdfs: ["research-paper.pdf"],
   },
   {
     category: "UX/XR",
@@ -358,7 +363,7 @@ export const PROJECTS: IProject[] = [
     images: {
       thumbnail: "thumbnail.png",
     },
-    pdf: "system-thinking.pdf",
+    pdfs: ["system-thinking.pdf"],
   },
   {
     category: "UX/XR",
@@ -372,6 +377,90 @@ export const PROJECTS: IProject[] = [
     images: {
       thumbnail: "thumbnail.png",
     },
-    pdf: "112.pdf",
+    pdfs: ["112.pdf"],
+  },
+  {
+    category: "Graphics",
+    title: "MOMENT",
+    subTitle: `Amidst the hustle and bustle, a moment of peace`,
+    description: [
+      "Kolkata, the enchanting City of Joy, holds fame for its scorching and sultry summers. In the midst of a sweltering afternoon, when my spirits were fading, a captivating sight emerged. There, amidst the sweat and toil, a member of the cleaning staff savored a luscious ice cream, igniting a spark of admiration within me. Eschewing the intrusion of a photograph, I chose instead to immortalize the moment through art. Thus, a masterpiece was born, capturing the essence of that fleeting instance, ensuring its memory remains vivid and cherished forever.",
+    ],
+    extendedDescription: "Have a watch of worth.",
+    projectSlug: "helping-didi",
+    images: {
+      thumbnail: "main/3.png",
+      main: ["1.png", "2.png", "3.png", "4.png"],
+    },
+  },
+  {
+    category: "Graphics",
+    title: "SANTORINI",
+    subTitle: `Nature's masterpiece in the form of Island`,
+    description: [
+      "The illustrations produced for this project will serve as captivating visual tributes to the stunning natural beauty and architectural splendor of Santorini, is a small Greek island and its stunning natural beauty, including its white-washed buildings, blue-domed churches, and dramatic cliffs. By skillfully blending artistic vision with cultural authenticity, these artworks will transport viewers an architectural awe of this enchanting island paradise.",
+    ],
+    extendedDescription: "Have a moment of visual delight.",
+    projectSlug: "santorini",
+    images: {
+      thumbnail: "main/Santorini2.png",
+      main: ["Santorini1.png", "Santorini2.png", "Santorini3.png"],
+    },
+  },
+  {
+    category: "Graphics",
+    title: "Publication Design",
+    subTitle: `Projects from my freelancing`,
+    description: [
+      "The task at hand was to design and create both a broadsheet and a tabloid newspaper, each tailored to its specific format and audience. The broadsheet will require a formal layout with in-depth articles and analyses, while the tabloid will need to be more visually engaging with shorter, attention-grabbing content.",
+    ],
+    projectSlug: "publication-design",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdfs: [
+      {
+        url: "tabloid.pdf",
+        alt: "Tabloid",
+      },
+      {
+        url: "broadsheet.pdf",
+        alt: "Broadsheet",
+      },
+    ],
+  },
+  {
+    category: "Graphics",
+    title: "Branding & Promotions",
+    subTitle: `Ryflect Apparel and Lifestyle`,
+    description: [
+      "This Project aims to revitalize Ryflect Apparel and Lifestyle brand image, refine promotional strategies, and boost sales and customer engagement. Through a comprehensive analysis of the company's current branding efforts and promotional tactics, this project will identify areas for improvement and suggest actionable changes to achieve measurable results.",
+    ],
+    extendedDescription: "Have a look !",
+    projectSlug: "branding",
+    images: {
+      thumbnail: "thumbnail.png",
+    },
+    pdfs: ["branding.pdf"],
+  },
+  {
+    category: "Graphics",
+    title: "Social Media Posts",
+    subTitle: `Enhance brand visibility & engagement`,
+    description: [
+      "The project aims to create engaging and effective social media posts for two brands: Supra and Neelam Chandiwala to enhance brand visibility, engagement, and ultimately contribute to the overall marketing objectives of these brands. Through strategic social media posting, we aim to strengthen brand loyalty and drive sales during key occasions throughout the year.",
+    ],
+    extendedDescription: "Check these out!",
+    projectSlug: "social-media-posts",
+    images: {
+      thumbnail:"main/Supra Minimalist (1).jpg",
+      main: [
+        "AS PURE AS FATHER_S LOVE (1).jpg",
+        "Copy of Add a heading.jpg",
+        "Copy of Untitled (1080 x 1080 px).png",
+        "STOP.png",
+        "Supra Minimalist (1).jpg",
+      ],
+    },
   },
 ];
