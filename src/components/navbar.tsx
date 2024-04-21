@@ -1,12 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import Link from "next/link";
 
 const NavBar = () => {
-  const LiClassName =
-    "hover:underline hover:underline-offset-4 transition-colors duration-200";
+  const LiClassName = "hover:underline hover:underline-offset-4";
   const whileHover = { scale: 1.1 };
-  const transition = { type: "spring", stiffness: 300, duration: 0.5 };
+  const transition = { type: "spring", stiffness: 500, duration: 0.1 };
   const initial = { opacity: 0, y: -10 };
   const animate = { opacity: 1, y: 0 };
 
@@ -23,7 +22,7 @@ const NavBar = () => {
       <Link href="/">
         <span className="font-bold">apoorva</span>
       </Link>
-      <ul className="flex gap-6">
+      <ul className="flex gap-8">
         <Link href="/">
           <motion.li
             className={LiClassName}

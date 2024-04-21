@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import { type Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
 import { nextui } from "@nextui-org/react";
 import tailwindForms from "@tailwindcss/forms";
@@ -13,7 +13,18 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        float: {
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-2px)" },
+          "100%": { transform: "translateY(0px)" },
+        },
+      },
+      animation: {
+        float: "float 2s ease-in-out infinite",
+      },
+    },
   },
   darkMode: "class",
   plugins: [

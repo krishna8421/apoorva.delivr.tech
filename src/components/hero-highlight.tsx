@@ -32,7 +32,7 @@ export const HeroHighlight = ({
       className={cn("relative w-full group", containerClassName)}
       onMouseMove={handleMouseMove}
     >
-      <div className="absolute inset-0 bg-dot-thick-neutral-900  pointer-events-none" />
+      <div className="absolute inset-0 bg-dot-thick-neutral-900 pointer-events-none" />
       <motion.div
         className="pointer-events-none bg-dot-thick-indigo-800 absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
         style={{

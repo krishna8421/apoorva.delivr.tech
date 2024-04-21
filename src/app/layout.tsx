@@ -64,7 +64,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body
         className={`${GeistSans.className} antialiased bg-black text-white`}
       >
-        <HeroHighlight className="w-3xl">
+        <HeroHighlight>
           <Providers>
             <main className="max-w-4xl w-full min-h-screen mx-auto flex flex-col justify-between">
               <NavBar />
