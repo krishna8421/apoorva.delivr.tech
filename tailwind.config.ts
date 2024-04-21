@@ -17,12 +17,18 @@ const config: Config = {
       keyframes: {
         float: {
           "0%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-2px)" },
+          "50%": { transform: "translateY(-5px)" },
           "100%": { transform: "translateY(0px)" },
+        },
+        "float-reverse": {
+          "0%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(0px)" },
+          "100%": { transform: "translateY(-5px)" },
         },
       },
       animation: {
         float: "float 2s ease-in-out infinite",
+        "float-reverse": "float-reverse 2s ease-in-out infinite",
       },
     },
   },

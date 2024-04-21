@@ -32,8 +32,8 @@ export default function HomePage() {
 
   return (
     <main className="">
-      <section className="flex md:flex-row flex-col gap-32 md:gap-8 px-12 pt-24 min-h-[calc(90vh-56px)]">
-        <div className="flex-1 md:mt-24 space-y-6">
+      <section className="flex md:flex-row flex-col gap-32 md:gap-8 px-12 pt-20 min-h-[calc(90vh-56px)]">
+        <div className="flex-1 md:mt-28 space-y-6">
           <span className="text-xl text-gray-300">Hey there, It&apos;s</span>
           <h1 className={`text-6xl font-bold ${syncopate.className}`}>
             {name}
@@ -60,10 +60,10 @@ export default function HomePage() {
         </div>
         <div className="flex-1 relative">
           <Image
-            src="/assets/girl.png"
+            src="/assets/girl-2.png"
             alt="Girl Image"
-            width={400}
-            height={400}
+            width={375}
+            height={375}
             className="rounded-full shadow-2xl"
           />
           <motion.div className="absolute -top-8 -left-20 md:-top-16 md:-left-20 animate-float">
@@ -74,7 +74,7 @@ export default function HomePage() {
               height={230}
             />
           </motion.div>
-          <motion.div className="absolute -top-16 -right-8 md:-top-24 md:-right-8 animate-float">
+          <motion.div className="absolute -top-16 -right-8 md:-top-24 md:-right-8 animate-float-reverse">
             <Image
               src="/assets/cup.png"
               alt="Cup Image"
