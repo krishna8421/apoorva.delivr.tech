@@ -51,10 +51,10 @@ export default function HomePage() {
           </h3>
           <div>
             <Link
-              href="/contact"
+              href="/projects"
               className="underline underline-offset-4 text-sm"
             >
-              Get in touch -&gt;
+              Explore -&gt;
             </Link>
           </div>
         </div>
