@@ -163,7 +163,7 @@ export const PROJECTS: IProject[] = [
     extendedDescription: `Have a look at these beautiful pieces!`,
     projectSlug: "burrow",
     images: {
-      thumbnail: "main/brrr6.png",
+      thumbnail: "main/BURROW1.3Ren.jpg",
       startMain: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
       startGrid: ["Screenshot 2024-03-06 061805.png", "burrow wireframe 2.png"],
       main: [
