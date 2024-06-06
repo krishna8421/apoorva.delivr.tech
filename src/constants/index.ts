@@ -164,16 +164,19 @@ export const PROJECTS: IProject[] = [
     projectSlug: "burrow",
     images: {
       thumbnail: "main/brrr6.png",
+      startMain: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
       startGrid: ["Screenshot 2024-03-06 061805.png", "burrow wireframe 2.png"],
       main: [
         "Screenshot 2024-03-06 024538.png",
+        "BURROW1.3Ren.jpg",
+        "BURROW2.3Ren.jpg",
+        "BURROW3.1Ren.jpg",
+        "BURROW5Ren.jpg",
+        "BURROW6Ren.jpg",
+        "BURROW8Ren.jpg",
         "960c04d3-523a-4b62-b6a0-1960b0353910.jpg",
         "brrr1.png",
-        "brrr2.png",
-        "brrr5.png",
-        "brrr6.png",
         "brrr7.png",
-        "brrr8.png",
         "brrr10.png",
         "brrr11.png",
         "brrr12.png",
@@ -453,7 +456,7 @@ export const PROJECTS: IProject[] = [
     extendedDescription: "Check these out!",
     projectSlug: "social-media-posts",
     images: {
-      thumbnail:"main/Supra Minimalist (1).jpg",
+      thumbnail: "main/Supra Minimalist (1).jpg",
       main: [
         "AS PURE AS FATHER_S LOVE (1).jpg",
         "Copy of Add a heading.jpg",
