@@ -135,7 +135,7 @@ export const PROJECTS: IProject[] = [
     description: [
       "The project is very close to my heart as this is my graduation project and it is the result of my bad experiences while understanding concepts in my curriculum and a strong desire to just fix it for others to have a better experience. What you learn today is what you will give to your tomorrow and I want the kids to learn a lot to give a lot!",
     ],
-    extendedDescription: "Made with love on Unity. For Oculus Quest 2.",
+    extendedDescription: "Made with ❤️ on Unity for Oculus Quest 2.",
     projectSlug: "bookscape",
     images: {
       thumbnail: "thumbnail.jpg",
