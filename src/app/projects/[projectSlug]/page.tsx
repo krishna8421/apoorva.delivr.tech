@@ -230,6 +230,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
                     pdfFile={`/projects/${project.projectSlug}/pdfs/${
                       typeof pdf === "object" ? pdf.url : pdf
                     }`}
+                    twoPageLayout={project.twoPageLayoutPdf}
                   />
                 </FollowerPointerCard>
               );

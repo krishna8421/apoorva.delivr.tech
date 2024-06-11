@@ -45,6 +45,7 @@ export interface IProject {
     middle?: string[];
   };
   pdfs?: IPdfs;
+  twoPageLayoutPdf?: boolean;
 }
 
 export const TOOLS = {
@@ -127,6 +128,20 @@ export const TOOLS = {
 };
 
 export const PROJECTS: IProject[] = [
+  {
+    category: "3D",
+    title: "BOOKSCAPE",
+    subTitle: "VR with a Vision",
+    description: [
+      "The project is very close to my heart as this is my graduation project and it is the result of my bad experiences while understanding concepts in my curriculum and a strong desire to just fix it for others to have a better experience. What you learn today is what you will give to your tomorrow and I want the kids to learn a lot to give a lot!",
+    ],
+    projectSlug: "bookscape",
+    images: {
+      thumbnail: "thumbnail.jpg",
+    },
+    pdfs: ["docs.pdf"],
+    twoPageLayoutPdf: true,
+  },
   {
     category: "3D",
     title: "MUSIC WITH A MISSION",

@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import { useResizeObserver } from "@wojtekmaj/react-hooks";
 import { pdfjs, Document, Page } from "react-pdf";
+import { cn } from "@/lib/utils";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import type { PDFDocumentProxy } from "pdfjs-dist";
@@ -24,10 +25,10 @@ const maxWidth = 768;
 
 interface IProps {
   pdfFile: string;
+  twoPageLayout?: boolean;
 }
 
-const PdfViewer = ({ pdfFile }: IProps) => {
-
+const PdfViewer = ({ pdfFile, twoPageLayout = false }: IProps) => {
   const [numPages, setNumPages] = useState<number>(0);
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();
@@ -59,14 +60,23 @@ const PdfViewer = ({ pdfFile }: IProps) => {
         file={`${pdfFile}`}
         onLoadSuccess={onDocumentLoadSuccess}
         options={options}
-        className="flex flex-col items-center gap-6"
+        className={cn(
+          "grid grid-cols-1 items-center gap-6",
+          twoPageLayout && "md:grid-cols-2"
+        )} 
       >
         {Array.from(new Array(numPages), (_, index) => (
           <Page
             key={`page_${index + 1}`}
             pageNumber={index + 1}
             width={
-              containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth
+              twoPageLayout
+                ? containerWidth
+                  ? Math.min(containerWidth / 2, maxWidth / 2)
+                  : maxWidth / 2
+                : containerWidth
+                ? Math.min(containerWidth, maxWidth)
+                : maxWidth
             }
             className="rounded-lg overflow-hidden"
           />
