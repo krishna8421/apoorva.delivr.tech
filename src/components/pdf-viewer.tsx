@@ -63,7 +63,7 @@ const PdfViewer = ({ pdfFile, twoPageLayout = false }: IProps) => {
         className={cn(
           "grid grid-cols-1 items-center gap-6",
           twoPageLayout && "md:grid-cols-2"
-        )} 
+        )}
       >
         {Array.from(new Array(numPages), (_, index) => (
           <Page
@@ -72,8 +72,9 @@ const PdfViewer = ({ pdfFile, twoPageLayout = false }: IProps) => {
             width={
               twoPageLayout
                 ? containerWidth
-                  ? Math.min(containerWidth / 2, maxWidth / 2)
-                  : maxWidth / 2
+                  // -24px because of gap-6
+                  ? Math.min((containerWidth - 24) / 2, (maxWidth - 24) / 2)
+                  : maxWidth - 24
                 : containerWidth
                 ? Math.min(containerWidth, maxWidth)
                 : maxWidth

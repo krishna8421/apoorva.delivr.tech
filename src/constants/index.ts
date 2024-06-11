@@ -139,6 +139,9 @@ export const PROJECTS: IProject[] = [
     images: {
       thumbnail: "thumbnail.jpg",
     },
+    videos: {
+      main: ["final.mp4"],
+    },
     pdfs: ["docs.pdf"],
     twoPageLayoutPdf: true,
   },
