@@ -16,10 +16,10 @@ export default function ProjectsPage() {
   const { category, setCategory } = useProjectCategory();
 
   return (
-    <main className="">
+    <main className="overflow-hidden">
       <div className="px-4 mx-auto max-w-4xl">
         <h2
-          className={`mt-24 text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
+          className={`mt-20 md:mt-24 text-5xl md:text-6xl tracking-tight font-extrabold text-center text-white ${syncopate.className}`}
         >
           Projects
         </h2>
@@ -53,11 +53,11 @@ export default function ProjectsPage() {
             </Tab>
             <Tab key="graphics" title="Graphics">
               <div className="m-auto">
-                {PROJECTS.filter((project) => project.category === "Graphics").map(
-                  (project, i) => (
-                    <Card data={project} index={i + 1} key={i} />
-                  )
-                )}
+                {PROJECTS.filter(
+                  (project) => project.category === "Graphics"
+                ).map((project, i) => (
+                  <Card data={project} index={i + 1} key={i} />
+                ))}
               </div>
             </Tab>
           </Tabs>

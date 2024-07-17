@@ -1,17 +1,18 @@
 "use client";
 
-import { syncopate, caveat, rockSalt } from "@/fonts";
+import { syncopate, rockSalt } from "@/fonts";
 import Image from "next/image";
-import { IProject, PROJECTS, IProjectCategory } from "@/constants";
 import Link from "next/link";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import { FaReact } from "react-icons/fa";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { TfiLinkedin } from "react-icons/tfi";
-import { MdEmail } from "react-icons/md";
+// import { IProject, PROJECTS, IProjectCategory } from "@/constants";
+// import { useScroll, useTransform, MotionValue } from "framer-motion";
+// import { useRef, useState, useEffect } from "react";
+// import { FaReact } from "react-icons/fa";
+// import { useGSAP } from "@gsap/react";
+// import { gsap } from "gsap";
+// import { TfiLinkedin } from "react-icons/tfi";
+// import { MdEmail } from "react-icons/md";
 
 export default function HomePage() {
   const name = "Apoorva";
@@ -31,11 +32,13 @@ export default function HomePage() {
   // };
 
   return (
-    <main className="">
-      <section className="flex md:flex-row flex-col gap-32 md:gap-8 px-12 pt-20 min-h-[calc(90vh-56px)]">
+    <main className="overflow-hidden lg:overflow-visible">
+      <section className="flex md:flex-row flex-col gap-32 md:gap-8 mx-6 md:mx-12 mt-20 min-h-[calc(90vh-56px)]">
         <div className="flex-1 md:mt-28 space-y-6">
           <span className="text-xl text-gray-300">Hey there, It&apos;s</span>
-          <h1 className={`text-6xl font-bold ${syncopate.className}`}>
+          <h1
+            className={`text-5xl md:text-6xl font-bold ${syncopate.className}`}
+          >
             {name}
           </h1>
           <h3 className={`text-2xl text-gray-200 ${rockSalt.className}`}>
@@ -64,9 +67,9 @@ export default function HomePage() {
             alt="Girl Image"
             width={375}
             height={375}
-            className="rounded-full shadow-2xl"
+            className="rounded-full shadow-2xl m-auto"
           />
-          <motion.div className="absolute -top-8 -left-20 md:-top-16 md:-left-20 animate-float">
+          <motion.div className="absolute -top-8 -left-16 md:-top-16 md:-left-20 animate-float">
             <Image
               src="/assets/controller.png"
               alt="Controller Image"
@@ -82,7 +85,7 @@ export default function HomePage() {
               height={250}
             />
           </motion.div>
-          <motion.div className="absolute top-20 -right-16 md:top-20 md:-right-36 animate-float">
+          <motion.div className="absolute top-20 -right-12 md:-right-20 lg:-right-36 md:top-20 animate-float">
             <Image
               src="/assets/vr.png"
               alt="VR Image"

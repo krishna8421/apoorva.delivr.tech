@@ -14,7 +14,7 @@ import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Toaster } from "sonner";
 import { HeroHighlight } from "@/components/hero-highlight";
-import PageAnimatePresence from "@/components/hoc/PageAnimatePresence";
+// import PageAnimatePresence from "@/components/hoc/PageAnimatePresence";
 import { Providers } from "./providers";
 import ScrollToTop from "@/components/scroll-to-top";
 
