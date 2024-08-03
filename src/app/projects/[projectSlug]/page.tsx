@@ -4,6 +4,7 @@ import { FollowerPointerCard } from "@/components/following-pointer";
 import PdfViewer from "@/components/pdf-viewer";
 import { PROJECTS } from "@/constants";
 import { syncopate } from "@/fonts";
+import { Avatar, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoChevronBack } from "react-icons/io5";
@@ -87,7 +88,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               </Chip>
             ))}
           </div>
-        )} */}
+        )} */}Mi
 
         <div className="space-y-4">
           {project.description.map((desc: string, index) => (
@@ -221,18 +222,19 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           >
             {project.pdfs?.map((pdf, index) => {
               return (
-                <FollowerPointerCard
-                  key={index}
-                  title={typeof pdf === "object" ? pdf.alt : undefined}
-                  // className={typeof pdf === "object" ? "" : "hidden"}
-                >
+                // <FollowerPointerCard
+                //   key={index}
+                //   title={typeof pdf === "object" ? pdf.alt : undefined}
+                //   // className={typeof pdf === "object" ? "" : "hidden"}
+                // >
                   <PdfViewer
+                    key={index}
                     pdfFile={`/projects/${project.projectSlug}/pdfs/${
                       typeof pdf === "object" ? pdf.url : pdf
                     }`}
                     twoPageLayout={project.twoPageLayoutPdf}
                   />
-                </FollowerPointerCard>
+                // </FollowerPointerCard>
               );
             })}
           </div>
