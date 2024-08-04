@@ -42,7 +42,6 @@ const PdfViewer = ({ pdfFile, twoPageLayout = false }: IProps) => {
   function onDocumentLoadSuccess({
     numPages: nextNumPages,
   }: PDFDocumentProxy): void {
-    // setIsLoading(false);
     setNumPages(nextNumPages);
   }
 
@@ -72,14 +71,16 @@ const PdfViewer = ({ pdfFile, twoPageLayout = false }: IProps) => {
             width={
               twoPageLayout
                 ? containerWidth
-                  // -24px because of gap-6
-                  ? Math.min((containerWidth - 24) / 2, (maxWidth - 24) / 2)
+                  ? containerWidth + 64 < 768
+                    ? Math.min(containerWidth, maxWidth)
+                    : // -24px because of gap-6
+                      Math.min((containerWidth - 24) / 2, (maxWidth - 24) / 2)
                   : maxWidth - 24
                 : containerWidth
                 ? Math.min(containerWidth, maxWidth)
                 : maxWidth
             }
-            className="rounded-lg overflow-hidden"
+            className="rounded-lg overflow-hidden h-fit"
           />
         ))}
       </Document>

@@ -56,7 +56,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
         <h2
           className={`mt-20 text-5xl md:text-6xl ${
             project.subTitle ? "" : "mb-8"
-          } tracking-tight font-extrabold text-center text-white uppercase ${
+          } tracking-tight font-extrabold text-center break-words text-white uppercase ${
             syncopate.className
           }`}
         >
@@ -65,7 +65,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
 
         {project.subTitle && (
           <h2
-            className={`text-balance text-xl md:text-2xl my-8 tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
+            className={`text-balance text-xl md:text-2xl my-8 break-words tracking-tight font-extrabold text-center text-white uppercase ${syncopate.className}`}
           >
             {project.subTitle}
           </h2>
@@ -88,7 +88,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
               </Chip>
             ))}
           </div>
-        )} */}Mi
+        )} */}
 
         <div className="space-y-4">
           {project.description.map((desc: string, index) => (
