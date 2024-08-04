@@ -148,32 +148,6 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "3D",
-    title: "MUSIC WITH A MISSION",
-    subTitle: `Skullcandy "All Love" Edition Crusher Evo`,
-    description: [
-      `Skullcandy is the original lifestyle audio brand, born in 2003 and their products are created, tuned and tested to deliver music people can feel. The Skullcandy "All Love'' Edition Crusher Evo headphone is a great amalgamation of music and mission. Working in partnership with To Write Love on Her Arms (TWLOHA), the company donated a portion of all proceeds from the sale of this new design to the nonprofit movement. This limited-edition headphone visibly celebrates the pride month with its vibrant color palette.`,
-    ],
-    extendedDescription: "All love & all year",
-    projectSlug: "skullcandy",
-    tools: [],
-    images: {
-      thumbnail: "main/SideViewRender2.png",
-      startGrid: [
-        "Wireframe.png",
-        "SideView.png",
-        "Bottom.png",
-        "X-ray-Mode.png",
-      ],
-      main: [
-        "WithoutColorsHeadphone.png",
-        "SideViewRender2.png",
-        "TwoHeadphones.png",
-        "SideViewRender1.png",
-      ],
-    },
-  },
-  {
-    category: "3D",
     title: "Airpods Max",
     subTitle: `Reimagine over-ear headphones`,
     description: [
@@ -225,6 +199,32 @@ export const PROJECTS: IProject[] = [
         "5.png",
         "E4 (1).png",
         "E5 (1).png",
+      ],
+    },
+  },
+  {
+    category: "3D",
+    title: "MUSIC WITH A MISSION",
+    subTitle: `Skullcandy "All Love" Edition Crusher Evo`,
+    description: [
+      `Skullcandy is the original lifestyle audio brand, born in 2003 and their products are created, tuned and tested to deliver music people can feel. The Skullcandy "All Love'' Edition Crusher Evo headphone is a great amalgamation of music and mission. Working in partnership with To Write Love on Her Arms (TWLOHA), the company donated a portion of all proceeds from the sale of this new design to the nonprofit movement. This limited-edition headphone visibly celebrates the pride month with its vibrant color palette.`,
+    ],
+    extendedDescription: "All love & all year",
+    projectSlug: "skullcandy",
+    tools: [],
+    images: {
+      thumbnail: "main/SideViewRender2.png",
+      startGrid: [
+        "Wireframe.png",
+        "SideView.png",
+        "Bottom.png",
+        "X-ray-Mode.png",
+      ],
+      main: [
+        "WithoutColorsHeadphone.png",
+        "SideViewRender2.png",
+        "TwoHeadphones.png",
+        "SideViewRender1.png",
       ],
     },
   },
