@@ -459,6 +459,50 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "Graphics",
+    title: "Bequest",
+    subTitle: `A Gift of Luxury`,
+    description: [
+      "The project is for the timeless tribute to luxury, the Bequest collection for Balaji Home Designs Pvt. Ltd. seamlessly blends classic elegance with modern artistry. Each meticulously crafted piece transforms spaces into sophisticated retreats, combining rich heritage with contemporary design. With exquisite attention to detail, this collection offers more than furniture—it's a cherished gift of refined living, promising to elevate your home with enduring grace and style.",
+    ],
+    extendedDescription:
+      "Discover the art of living beautifully with pieces that stand the test of time!",
+    projectSlug: "bequest",
+    images: {
+      thumbnail: "bequest.png",
+    },
+    pdfs: ["bequest-min.pdf"],
+  },
+  {
+    category: "Graphics",
+    title: "Pristine",
+    subTitle: `Gentleman in Furniture`,
+    description: [
+      "The project is a curated catalogue for the Pristine collection of Balaji Home Designs Pvt. Ltd., a true celebration of refined luxury and timeless sophistication. Inspired by the elegance and poise of a gentleman, each piece in the collection transforms interiors with understated charm and a confident presence. Meticulously crafted with an artful balance of luxury and functionality, Pristine redefines graceful living, offering timeless designs that resonate with purity, precision, and quiet sophistication.",
+    ],
+    extendedDescription: "Where Elegance Meets Timeless Craftsmanship!",
+    projectSlug: "pristine",
+    images: {
+      thumbnail: "pristine.png",
+    },
+    pdfs: ["pristine-min.pdf"],
+  },
+  {
+    category: "Graphics",
+    title: "Laconic",
+    subTitle: `Timeless Form & Function`,
+    description: [
+      "This project is a curated catalogue for Balaji Home Designs Pvt. Ltd., the Laconic collection draws inspiration from the timeless allure and precision of luxury automobiles like Morgan, Bugatti, and Aston Martin. Each piece is a tribute to streamlined elegance, where bold contours meet luxurious materials in a dance of form and function. With a refined simplicity that speaks volumes, Laconic transforms interiors into sophisticated retreats, embodying the power and grace of modern luxury at its finest.",
+    ],
+    extendedDescription:
+      "Furniture that Moves You!",
+    projectSlug: "laconic",
+    images: {
+      thumbnail: "laconic.png",
+    },
+    pdfs: ["laconic-min.pdf"],
+  },
+  {
+    category: "Graphics",
     title: "MOMENT",
     subTitle: `Amidst the hustle and bustle, a moment of peace`,
     description: [
