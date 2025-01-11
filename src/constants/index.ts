@@ -468,9 +468,9 @@ export const PROJECTS: IProject[] = [
       "Discover the art of living beautifully with pieces that stand the test of time!",
     projectSlug: "bequest",
     images: {
-      thumbnail: "bequest.png",
+      thumbnail: "thumbnail.jpg",
     },
-    pdfs: ["bequest-min.pdf"],
+    pdfs: ["bequest.pdf"],
   },
   {
     category: "Graphics",
@@ -482,9 +482,9 @@ export const PROJECTS: IProject[] = [
     extendedDescription: "Where Elegance Meets Timeless Craftsmanship!",
     projectSlug: "pristine",
     images: {
-      thumbnail: "pristine.png",
+      thumbnail: "thumbnail.jpg",
     },
-    pdfs: ["pristine-min.pdf"],
+    pdfs: ["pristine.pdf"],
   },
   {
     category: "Graphics",
@@ -497,9 +497,9 @@ export const PROJECTS: IProject[] = [
       "Furniture that Moves You!",
     projectSlug: "laconic",
     images: {
-      thumbnail: "laconic.png",
+      thumbnail: "thumbnail.jpg",
     },
-    pdfs: ["laconic-min.pdf"],
+    pdfs: ["laconic.pdf"],
   },
   {
     category: "Graphics",
