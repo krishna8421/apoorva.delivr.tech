@@ -487,30 +487,30 @@ export const PROJECTS: IProject[] = [
       "twitter-posts": [
         {
           slug: "live24.fun",
-          images: ["2.jpg", "3.jpg", "4.jpg", "6.jpg", "9.jpg"],
+          images: ["2.jpg", "3.jpg", "6.jpg", "9.jpg"],
           name: "Live24.Fun",
         },
       ],
       "instagram-posts": [
         {
-          images: ["1.jpg", "Final.jpg"],
-          slug: "neelam-chandiwala",
-          name: "Neelam Chandiwala",
-        },
-        {
-          images: ["1.jpg", "2.jpg", "3.jpg", "Final.jpg"],
+          images: ["Final.jpg", "1.jpg", "2.jpg", "3.jpg"],
           slug: "ola-brazil",
           name: "Ola Brazil",
         },
         {
-          images: ["1.jpg", "Final.jpg"],
+          images: ["Final.jpg", "1.jpg"],
           slug: "pinjrapole-society",
           name: "Calcutta Pinjrapole Society",
         },
         {
-          images: ["Final.jpg"],
+          images: ["1.jpg"],
           slug: "supra",
           name: "Supra",
+        },
+        {
+          images: ["Final.jpg", "1.jpg"],
+          slug: "neelam-chandiwala",
+          name: "Neelam Chandiwala",
         },
       ],
     },
