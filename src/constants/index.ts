@@ -46,6 +46,13 @@ export interface IProject {
   };
   pdfs?: IPdfs;
   twoPageLayoutPdf?: boolean;
+  subProjects?: {
+    [key: string]: {
+      name: string;
+      images: IImages;
+      slug: string;
+    }[];
+  };
 }
 
 export const TOOLS = {
@@ -459,6 +466,57 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "Graphics",
+    title: "Social Storytelling",
+    subTitle: `To connect audience & brands strongly`,
+    description: [
+      "This section has few of my Instagram posts, Twitter post and emailers designed for various companies as a part of my freelancing project to engage, inspire and connect. From scroll-stopping visuals to compelling messages, each piece transforms ideas into impactful visuals that resonate with the audience and elevate brand presence.",
+    ],
+    extendedDescription: "A step toward creating conversations that matter!",
+    projectSlug: "social-storytelling",
+    images: {
+      thumbnail: "thumbnail.jpg",
+    },
+    subProjects: {
+      emailers: [
+        {
+          images: ["1.jpg", "2.jpg"],
+          name: "T-Life",
+          slug: "blogathon",
+        },
+      ],
+      "twitter-posts": [
+        {
+          slug: "live24.fun",
+          images: ["2.jpg", "3.jpg", "4.jpg", "6.jpg", "9.jpg"],
+          name: "Live24.Fun",
+        },
+      ],
+      "instagram-posts": [
+        {
+          images: ["1.jpg", "Final.jpg"],
+          slug: "neelam-chandiwala",
+          name: "Neelam Chandiwala",
+        },
+        {
+          images: ["1.jpg", "2.jpg", "3.jpg", "Final.jpg"],
+          slug: "ola-brazil",
+          name: "Ola Brazil",
+        },
+        {
+          images: ["1.jpg", "Final.jpg"],
+          slug: "pinjrapole-society",
+          name: "Calcutta Pinjrapole Society",
+        },
+        {
+          images: ["Final.jpg"],
+          slug: "supra",
+          name: "Supra",
+        },
+      ],
+    },
+  },
+  {
+    category: "Graphics",
     title: "Bequest",
     subTitle: `A Gift of Luxury`,
     description: [
@@ -493,8 +551,7 @@ export const PROJECTS: IProject[] = [
     description: [
       "This project is a curated catalogue for Balaji Home Designs Pvt. Ltd., the Laconic collection draws inspiration from the timeless allure and precision of luxury automobiles like Morgan, Bugatti, and Aston Martin. Each piece is a tribute to streamlined elegance, where bold contours meet luxurious materials in a dance of form and function. With a refined simplicity that speaks volumes, Laconic transforms interiors into sophisticated retreats, embodying the power and grace of modern luxury at its finest.",
     ],
-    extendedDescription:
-      "Furniture that Moves You!",
+    extendedDescription: "Furniture that Moves You!",
     projectSlug: "laconic",
     images: {
       thumbnail: "thumbnail.jpg",

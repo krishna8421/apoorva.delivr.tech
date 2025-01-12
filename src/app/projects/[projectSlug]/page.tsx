@@ -3,12 +3,21 @@
 import { FollowerPointerCard } from "@/components/following-pointer";
 import PdfViewer from "@/components/pdf-viewer";
 import { PROJECTS } from "@/constants";
-import { syncopate } from "@/fonts";
+import { syncopate, rockSalt, caveat } from "@/fonts";
 import { Avatar, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import { register } from "swiper/element/bundle";
 import { IoChevronBack } from "react-icons/io5";
-// import { Chip, Avatar } from "@nextui-org/react";
+import { useEffect } from "react";
+import { useRef } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 // import type { Metadata, ResolvingMetadata } from "next";
 // import { SITE_NAME } from "@/constants";
 
@@ -41,6 +50,21 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
     throw new Error(`Project not found for slug: ${projectSlug}`);
   }
 
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const swiperContainer = swiperRef.current;
+    if (swiperContainer) {
+      const params = {
+        navigation: true,
+        fade: true,
+        rewind: true,
+      };
+
+      Object.assign(swiperContainer, params);
+      (swiperContainer as any).initialize();
+    }
+  }, []);
   return (
     <main className="">
       <div className="px-4 mx-auto max-w-screen-md">
@@ -227,17 +251,65 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
                 //   title={typeof pdf === "object" ? pdf.alt : undefined}
                 //   // className={typeof pdf === "object" ? "" : "hidden"}
                 // >
-                  <PdfViewer
-                    key={index}
-                    pdfFile={`/projects/${project.projectSlug}/pdfs/${
-                      typeof pdf === "object" ? pdf.url : pdf
-                    }`}
-                    twoPageLayout={project.twoPageLayoutPdf}
-                  />
+                <PdfViewer
+                  key={index}
+                  pdfFile={`/projects/${project.projectSlug}/pdfs/${
+                    typeof pdf === "object" ? pdf.url : pdf
+                  }`}
+                  twoPageLayout={project.twoPageLayoutPdf}
+                />
                 // </FollowerPointerCard>
               );
             })}
           </div>
+
+          {project.subProjects &&
+            Object.keys(project.subProjects).map((key, index) => (
+              <div key={index} className="mb-8 space-y-4">
+                <h2
+                  className={`text-3xl md:text-4xl font-medium text-left break-words text-zinc-300 uppercase ${syncopate.className}`}
+                >
+                  {key.split("-").join(" ")}
+                </h2>
+                {project.subProjects?.[key]?.map((subProject, i) => (
+                  <div key={i} className="flex gap-3 flex-col">
+                    {subProject?.images?.length > 1 ? (
+                      <Carousel>
+                        <CarouselContent>
+                          {subProject?.images?.map((image, index) => (
+                            <CarouselItem key={index}>
+                              <Image
+                                key={index}
+                                src={`/projects/${project.projectSlug}/sub-projects/${key}/${subProject.slug}/${image}`}
+                                alt={subProject.name}
+                                width={800}
+                                height={600}
+                                quality={100}
+                                className="rounded-lg border border-zinc-900 shadow-xl w-full h-full object-cover"
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                      </Carousel>
+                    ) : subProject?.images?.length === 1 ? (
+                      <Image
+                        src={`/projects/${project.projectSlug}/sub-projects/${key}/${subProject.name}/${subProject.images[0]}`}
+                        alt={subProject.name}
+                        width={800}
+                        height={600}
+                        quality={100}
+                        className="rounded-lg border border-zinc-900 shadow-xl w-full h-full"
+                      />
+                    ) : null}
+                    <div className="text-center capitalize mb-6">
+                      {subProject.name.split("-").join(" ")}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
         </div>
       </div>
     </main>
