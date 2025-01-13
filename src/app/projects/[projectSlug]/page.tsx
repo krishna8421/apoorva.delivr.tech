@@ -295,7 +295,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
                       </Carousel>
                     ) : subProject?.images?.length === 1 ? (
                       <Image
-                        src={`/projects/${project.projectSlug}/sub-projects/${key}/${subProject.name}/${subProject.images[0]}`}
+                        src={`/projects/${project.projectSlug}/sub-projects/${key}/${subProject.slug}/${subProject.images[0]}`}
                         alt={subProject.name}
                         width={800}
                         height={600}

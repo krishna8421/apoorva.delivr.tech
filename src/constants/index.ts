@@ -499,18 +499,23 @@ export const PROJECTS: IProject[] = [
         },
         {
           images: ["Final.jpg", "1.jpg"],
-          slug: "pinjrapole-society",
-          name: "Calcutta Pinjrapole Society",
+          slug: "supra-fathers-day",
+          name: "Supra (Father's Day)",
         },
         {
-          images: ["1.jpg"],
-          slug: "supra",
-          name: "Supra",
+          images: ["Final.jpg"],
+          slug: "supra-child-labour",
+          name: "Supra (Child Labour)",
         },
         {
           images: ["Final.jpg", "1.jpg"],
           slug: "neelam-chandiwala",
           name: "Neelam Chandiwala",
+        },
+        {
+          images: ["Final.png", "1.jpg", "2.png"],
+          slug: "pinjrapole-society",
+          name: "Calcutta Pinjrapole Society",
         },
       ],
     },
