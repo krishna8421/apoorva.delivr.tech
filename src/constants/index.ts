@@ -627,24 +627,24 @@ export const PROJECTS: IProject[] = [
     },
     pdfs: ["branding.pdf"],
   },
-  {
-    category: "Graphics",
-    title: "Social Media Posts",
-    subTitle: `Enhance brand visibility & engagement`,
-    description: [
-      "The project aims to create engaging and effective social media posts for two brands: Supra and Neelam Chandiwala to enhance brand visibility, engagement, and ultimately contribute to the overall marketing objectives of these brands. Through strategic social media posting, we aim to strengthen brand loyalty and drive sales during key occasions throughout the year.",
-    ],
-    extendedDescription: "Check these out!",
-    projectSlug: "social-media-posts",
-    images: {
-      thumbnail: "main/Supra Minimalist (1).jpg",
-      main: [
-        "AS PURE AS FATHER_S LOVE (1).jpg",
-        "Copy of Add a heading.jpg",
-        "Copy of Untitled (1080 x 1080 px).png",
-        "STOP.png",
-        "Supra Minimalist (1).jpg",
-      ],
-    },
-  },
+  // {
+  //   category: "Graphics",
+  //   title: "Social Media Posts",
+  //   subTitle: `Enhance brand visibility & engagement`,
+  //   description: [
+  //     "The project aims to create engaging and effective social media posts for two brands: Supra and Neelam Chandiwala to enhance brand visibility, engagement, and ultimately contribute to the overall marketing objectives of these brands. Through strategic social media posting, we aim to strengthen brand loyalty and drive sales during key occasions throughout the year.",
+  //   ],
+  //   extendedDescription: "Check these out!",
+  //   projectSlug: "social-media-posts",
+  //   images: {
+  //     thumbnail: "main/Supra Minimalist (1).jpg",
+  //     main: [
+  //       "AS PURE AS FATHER_S LOVE (1).jpg",
+  //       "Copy of Add a heading.jpg",
+  //       "Copy of Untitled (1080 x 1080 px).png",
+  //       "STOP.png",
+  //       "Supra Minimalist (1).jpg",
+  //     ],
+  //   },
+  // },
 ];
