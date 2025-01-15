@@ -16,7 +16,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function HomePage() {
   const name = "Apoorva";
-  const myRoles = ["3D Artist", "XR Designer", "UX Specialist"];
+  const myRoles = ["Tech-Enthusiast", "Multidisciplinary", "Designer"];
 
   // const featuredProjects: Record<IProjectCategory, IProject | undefined> = {
   //   "3D": PROJECTS.find((project) => project.category === "3D"),

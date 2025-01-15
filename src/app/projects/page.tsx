@@ -42,7 +42,7 @@ export default function ProjectsPage() {
                 )}
               </div>
             </Tab>
-            <Tab key="ux/xr" title="UX/XR">
+            <Tab key="ux/xr" title="Research">
               <div className="m-auto">
                 {PROJECTS.filter((project) => project.category === "UX/XR").map(
                   (project, i) => (
