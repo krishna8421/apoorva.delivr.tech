@@ -638,7 +638,7 @@ export const PROJECTS: IProject[] = [
     ],
     projectSlug: "publication-design",
     images: {
-      thumbnail: "thumbnail.png",
+      thumbnail: "thumbnail.jpg",
     },
     pdfs: [
       {
