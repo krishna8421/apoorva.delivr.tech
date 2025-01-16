@@ -155,6 +155,44 @@ export const PROJECTS: IProject[] = [
   },
   {
     category: "3D",
+    title: "MODERN COMFORT",
+    subTitle: "The Armour Bed",
+    description: [
+      "This project presents a meticulously crafted 3D visualization of a modern luxury bedroom interior, designed for Balaji Home Designs Pvt. Ltd. as part of the Pristine Collection. At the heart of the design is the Armour Bed, a stunning centerpiece that seamlessly merges sleek aesthetics with exceptional comfort. This visualization captures the essence of the Pristine Collection, showcasing a perfect blend of refined luxury and functional elegance. The bedroom is thoughtfully designed as a tranquil haven, embodying timeless sophistication and modern comfort to create a serene and sophisticated living experience.",
+    ],
+    extendedDescription: "A blend of refined luxury & functional elegance!",
+    projectSlug: "modern-comfort",
+    images: {
+      thumbnail: "main/9.jpg",
+      main: [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "9.jpg",
+      ],
+    },
+  },
+  {
+    category: "3D",
+    title: "ETERNA",
+    subTitle: "Luxury dining with timeless charm",
+    description: [
+      "This 3D visualization showcases Eterna Luxe Dining, a modern luxury dining space designed to exude elegance and sophistication. The centerpiece is a sleek, round dining table with a marble top and a bold, contemporary base, surrounded by leather-upholstered chairs that blend comfort with style. The backdrop features a stunning abstract art piece framed by vertical lighting accents, creating a warm and inviting ambiance. The dark wood paneling and subtle greenery add depth and balance to the design, enhancing the space's modern aesthetic. Eterna Luxe Dining is a seamless fusion of artistry and functionality, redefining luxury dining with timeless charm.",
+    ],
+    extendedDescription: "A seamless fusion of artistry and functionality!",
+    projectSlug: "eterna",
+    images: {
+      thumbnail: "main/4.jpg",
+      startGrid: ["1.png", "2.png"],
+      main: ["3.png", "4.jpg", "5.jpg", "6.jpg", "7.jpg"],
+    },
+  },
+  {
+    category: "3D",
     title: "Airpods Max",
     subTitle: `Reimagine over-ear headphones`,
     description: [
